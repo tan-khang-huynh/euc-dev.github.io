@@ -12,22 +12,27 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      # Fork + branch for Workspace ONE UEM APIs submodule override (portal submodule still points at euc-dev in .gitmodules).
+      WS1_UEM_APIS_REPO: https://github.com/tan-khang-huynh/ws1-uem-apis.git
+      WS1_UEM_APIS_BRANCH: feature/convert-postman-to-bruno
     steps:
       - uses: actions/checkout@v4
         with:
           submodules: true
+          fetch-depth: 0
+      - name: Use fork ws1-uem-apis
+        run: |
+          rm -rf apis/ws1-uem-apis
+          git clone --depth 1 --branch "${WS1_UEM_APIS_BRANCH}" "${WS1_UEM_APIS_REPO}" apis/ws1-uem-apis
       - name: Configure Git Credentials
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-      # - name: Set git submodule update recursive init
-        # run: |
-        #   git submodule update --recursive --init
       - uses: actions/setup-python@v5
         with:
-          fetch-depth: 0
           python-version: 3.x
-      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
       - uses: actions/cache@v4
         with:
           key: mkdocs-material-${{ env.cache_id }}
