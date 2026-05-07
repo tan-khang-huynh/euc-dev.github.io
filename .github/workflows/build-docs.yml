@@ -25,6 +25,10 @@ jobs:
         run: |
           rm -rf apis/ws1-uem-apis
           git clone --depth 1 --branch "${WS1_UEM_APIS_BRANCH}" "${WS1_UEM_APIS_REPO}" apis/ws1-uem-apis
+      - name: Link portal assets into ws1-uem-apis
+        run: |
+          rm -rf apis/ws1-uem-apis/docs/assets
+          ln -sfn "$(pwd)/docs/assets" apis/ws1-uem-apis/docs/assets
       - name: Configure Git Credentials
         run: |
           git config user.name github-actions[bot]
