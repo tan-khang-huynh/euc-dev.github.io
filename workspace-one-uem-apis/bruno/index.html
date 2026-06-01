@@ -9783,10 +9783,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#aw-tenant-code-and-rest-api-url" class="md-nav__link">
+  <a href="#rest-api-url" class="md-nav__link">
     <span class="md-ellipsis">
       
-        aw-tenant-code and REST API URL
+        REST API URL
       
     </span>
   </a>
@@ -17700,10 +17700,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#aw-tenant-code-and-rest-api-url" class="md-nav__link">
+  <a href="#rest-api-url" class="md-nav__link">
     <span class="md-ellipsis">
       
-        aw-tenant-code and REST API URL
+        REST API URL
       
     </span>
   </a>
@@ -17949,21 +17949,19 @@
 <h3 id="collect-environment-variable-values">Collect Environment Variable Values<a class="headerlink" href="#collect-environment-variable-values" title="Permanent link">&para;</a></h3>
 <p>Before making the first API call, you must collect these five items:</p>
 <ul>
-<li>aw-tenant-code (API key)</li>
 <li>REST API URL</li>
 <li>Oauth token URL</li>
 <li>Oauth client ID</li>
 <li>Oauth client secret</li>
 </ul>
-<h4 id="aw-tenant-code-and-rest-api-url">aw-tenant-code and REST API URL<a class="headerlink" href="#aw-tenant-code-and-rest-api-url" title="Permanent link">&para;</a></h4>
+<h4 id="rest-api-url">REST API URL<a class="headerlink" href="#rest-api-url" title="Permanent link">&para;</a></h4>
 <p>To get these first two values, follow these steps:</p>
 <ol>
 <li>In the Workspace ONE UEM admin console, navigate to <strong>Groups and Settings</strong> &gt; <strong>All Settings</strong> &gt; <strong>System</strong> &gt; <strong>Advanced</strong> &gt; <strong>API</strong> &gt; <strong>Rest API</strong>. Make sure you're in Customer OG or below.</li>
-<li>Copy the API key and hostname part of the REST API URL (e.g. as2060).<br />
-   <img src="../76200-1119-175655-7.png" alt="API key and REST API URL settings" style="display:block; margin-top:0.5rem;" /></li>
-<li>Back in Bruno, add these values in the <strong>environment</strong> for the collection (variable names may match <code>YOUR_API_SERVER</code>, <code>aw-tenant-code</code>, or similar—use the names your Bruno environment defines):</li>
-<li>YOUR_API_SERVER</li>
-<li>Aw-tenant-code<br />
+<li>Copy the hostname part of the REST API URL (e.g. localhost).<br />
+   <img src="../images/rest-api-url.png" alt="REST API URL settings" style="display:block; margin-top:0.5rem;" /></li>
+<li>Back in Bruno, add this value in the <strong>environment</strong> for the collection (variable names may match <code>YOUR_API_SERVER</code> or similar—use the names your Bruno environment defines):</li>
+<li>YOUR_API_SERVER
    <img src="../images/add-env-variables.png" alt="Adding aw-tenant-code and baseUrl variables" style="display:block; margin-top:0.5rem;" /></li>
 </ol>
 <h4 id="oauth-token-url">OAuth token URL<a class="headerlink" href="#oauth-token-url" title="Permanent link">&para;</a></h4>
