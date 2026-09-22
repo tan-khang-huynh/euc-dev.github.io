@@ -25,13 +25,13 @@
       
       
       <link rel="icon" href="../../../../../assets/logos/favicon-light.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
   <title>Omnissa Developer Portal</title>
 
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -17809,14 +17809,14 @@
 
 String[] networkAddresses = info.getUdpData().getNetworkAddresses();
 String[] updatedNetworkAddresses = ...; // Copy network addresses, allocate one new cell at beginning.
-updatedNetworkAddresses[0] = &quot;&lt;udp-network-address&gt;&quot;;
+updatedNetworkAddresses[0] = "&lt;udp-network-address&gt;";
 
 MapEntry enabledUpdate = new MapEntry();
-enabledUpdate.key = &quot;udpData.enabled&quot;;
+enabledUpdate.key = "udpData.enabled";
 enabledUpdate.value = true;
 
 MapEntry networkAddressesUpdate = new MapEntry();
-networkAddressesUpdate.key = &quot;udpData.networkAddresses&quot;;
+networkAddressesUpdate.key = "udpData.networkAddresses";
 networkAddressesUpdate.value = updatedNetworkAddresses;
 
 syslog.update(new MapEntry[] { enabledUpdate, networkAddressesUpdate });
@@ -17826,7 +17826,7 @@ syslog.update(new MapEntry[] { enabledUpdate, networkAddressesUpdate });
 // List is unmodifiable
 List networkAddresses = info.getUdpData().getNetworkAddresses();
 List updatedNetworkAddresses = new ArrayList&lt;&gt;(networkAddresses);
-updatedNetworkAddresses.add(&quot;&lt;udp-network-address&gt;&quot;);
+updatedNetworkAddresses.add("&lt;udp-network-address&gt;");
 
 UDPDataClient udpData = info.getUdpData();
 udpData.setEnabled(true);
@@ -17835,7 +17835,7 @@ info.update(connection);
 </code></pre></div>
 <h3 id="example-enabling-a-desktop">Example: Enabling a desktop<a class="headerlink" href="#example-enabling-a-desktop" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>MapEntry enabledUpdate = new MapEntry();
-enabledUpdate.key = &quot;desktopSettings.enabled&quot;;
+enabledUpdate.key = "desktopSettings.enabled";
 enabledUpdate.value = true;
 desktop.update(id, new MapEntry[] { enabledUpdate });
 </code></pre></div>
@@ -18098,7 +18098,7 @@ info.update(connection);
       <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "header.autohide", "navigation.header", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../../../js/timeago.min.js"></script>
       

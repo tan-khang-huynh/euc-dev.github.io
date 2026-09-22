@@ -25,13 +25,13 @@
       
       
       <link rel="icon" href="../../assets/logos/favicon-light.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
   <title>Omnissa Developer Portal</title>
 
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -17747,46 +17747,46 @@
 </div>
 <h2 id="to-query-audit-api-via-shell">To query Audit API via shell<a class="headerlink" href="#to-query-audit-api-via-shell" title="Permanent link">&para;</a></h2>
 <p>In this example I am retrieving all audit events of type LOGIN and I am restricting the time with toMillis parameter.</p>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-H<span class="w"> </span><span class="s1">&#39;authorization: Bearer &lt;your token here&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-H<span class="w"> </span><span class="s1">'authorization: Bearer &lt;your token here&gt;'</span><span class="w"> </span><span class="se">\</span>
 &lt;your<span class="w"> </span>tenant<span class="w"> </span>name<span class="w"> </span>here&gt;/analytics/reports/audit?/analytics/reports/audit?fromMillis<span class="o">=</span><span class="m">1559499975000</span><span class="se">\&amp;</span><span class="nv">objectType</span><span class="o">=</span>LOGIN<span class="p">|</span><span class="w"> </span>json_pp
 </code></pre></div>
 <p>Omnissa Access will return the following as a response:</p>
 <p>In this example we see 2 events of LOGIN type for the username admin the auth method used is password against local directory.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">   </span><span class="nt">&quot;header&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">      </span><span class="s2">&quot;reports.dateAndTime&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="s2">&quot;reports.userDomain&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="s2">&quot;reports.Event&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="s2">&quot;reports.object&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="s2">&quot;&quot;</span>
+<span class="w">   </span><span class="nt">"header"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="s2">"reports.dateAndTime"</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">"reports.userDomain"</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">"reports.Event"</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">"reports.object"</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">""</span>
 <span class="w">   </span><span class="p">],</span>
-<span class="w">   </span><span class="nt">&quot;data&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">   </span><span class="nt">"data"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">      </span><span class="p">[</span>
-<span class="w">         </span><span class="s2">&quot;1561399981109&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="s2">&quot;admin (System Domain)&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="s2">&quot;LOGIN (Password (Local Directory))&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">"1561399981109"</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">"admin (System Domain)"</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">"LOGIN (Password (Local Directory))"</span><span class="p">,</span>
 <span class="w">         </span><span class="kc">null</span><span class="p">,</span>
-<span class="w">         </span><span class="s2">&quot;{\&quot;baseType\&quot;:\&quot;Action\&quot;,\&quot;uuid\&quot;:\&quot;fe0944c3-5e69-425c-92ee-9db0b099d1aa\&quot;,\&quot;timestamp\&quot;:1561399981109,\&quot;organizationId\&quot;:252221,\&quot;tenantId\&quot;:\&quot;&lt;your tenant id&gt;\&quot;,\&quot;actorId\&quot;:5723506,\&quot;actorUserName\&quot;:\&quot;admin\&quot;,\&quot;actorDomain\&quot;:\&quot;System Domain\&quot;,\&quot;actorUuid\&quot;:\&quot;35ac32d1-1565-4ab4-ad1a-191120540590\&quot;,\&quot;clientId\&quot;:null,\&quot;deviceId\&quot;:\&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36\&quot;,\&quot;workspaceId\&quot;:null,\&quot;sourceIp\&quot;:\&quot;208.91.2.2\&quot;,\&quot;objectType\&quot;:\&quot;LOGIN\&quot;,\&quot;objectId\&quot;:null,\&quot;objectName\&quot;:null,\&quot;values\&quot;:{\&quot;deviceType\&quot;:\&quot;browser\&quot;,\&quot;success\&quot;:\&quot;true\&quot;,\&quot;authMethods\&quot;:\&quot;Password (Local Directory)\&quot;,\&quot;actorExternalId\&quot;:null}}&quot;</span>
+<span class="w">         </span><span class="s2">"{\"baseType\":\"Action\",\"uuid\":\"fe0944c3-5e69-425c-92ee-9db0b099d1aa\",\"timestamp\":1561399981109,\"organizationId\":252221,\"tenantId\":\"&lt;your tenant id&gt;\",\"actorId\":5723506,\"actorUserName\":\"admin\",\"actorDomain\":\"System Domain\",\"actorUuid\":\"35ac32d1-1565-4ab4-ad1a-191120540590\",\"clientId\":null,\"deviceId\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36\",\"workspaceId\":null,\"sourceIp\":\"208.91.2.2\",\"objectType\":\"LOGIN\",\"objectId\":null,\"objectName\":null,\"values\":{\"deviceType\":\"browser\",\"success\":\"true\",\"authMethods\":\"Password (Local Directory)\",\"actorExternalId\":null}}"</span>
 <span class="w">      </span><span class="p">],</span>
 <span class="w">      </span><span class="p">[</span>
-<span class="w">         </span><span class="s2">&quot;1561357380574&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="s2">&quot;admin (System Domain)&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="s2">&quot;LOGIN (Password (Local Directory))&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">"1561357380574"</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">"admin (System Domain)"</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">"LOGIN (Password (Local Directory))"</span><span class="p">,</span>
 <span class="w">         </span><span class="kc">null</span><span class="p">,</span>
-<span class="w">         </span><span class="s2">&quot;{\&quot;baseType\&quot;:\&quot;Action\&quot;,\&quot;uuid\&quot;:\&quot;314ee065-744f-4188-b595-0aa961ff00b7\&quot;,\&quot;timestamp\&quot;:1561357380574,\&quot;organizationId\&quot;:252221,\&quot;tenantId\&quot;:\&quot;&lt;your tenant id&gt;\&quot;,\&quot;actorId\&quot;:5723506,\&quot;actorUserName\&quot;:\&quot;admin\&quot;,\&quot;actorDomain\&quot;:\&quot;System Domain\&quot;,\&quot;actorUuid\&quot;:\&quot;35ac32d1-1565-4ab4-ad1a-191120540590\&quot;,\&quot;clientId\&quot;:null,\&quot;deviceId\&quot;:\&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36\&quot;,\&quot;workspaceId\&quot;:null,\&quot;sourceIp\&quot;:\&quot;66.170.99.1\&quot;,\&quot;objectType\&quot;:\&quot;LOGIN\&quot;,\&quot;objectId\&quot;:null,\&quot;objectName\&quot;:null,\&quot;values\&quot;:{\&quot;deviceType\&quot;:\&quot;browser\&quot;,\&quot;success\&quot;:\&quot;true\&quot;,\&quot;authMethods\&quot;:\&quot;Password (Local Directory)\&quot;,\&quot;actorExternalId\&quot;:null}}&quot;</span>
+<span class="w">         </span><span class="s2">"{\"baseType\":\"Action\",\"uuid\":\"314ee065-744f-4188-b595-0aa961ff00b7\",\"timestamp\":1561357380574,\"organizationId\":252221,\"tenantId\":\"&lt;your tenant id&gt;\",\"actorId\":5723506,\"actorUserName\":\"admin\",\"actorDomain\":\"System Domain\",\"actorUuid\":\"35ac32d1-1565-4ab4-ad1a-191120540590\",\"clientId\":null,\"deviceId\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36\",\"workspaceId\":null,\"sourceIp\":\"66.170.99.1\",\"objectType\":\"LOGIN\",\"objectId\":null,\"objectName\":null,\"values\":{\"deviceType\":\"browser\",\"success\":\"true\",\"authMethods\":\"Password (Local Directory)\",\"actorExternalId\":null}}"</span>
 <span class="w">      </span><span class="p">]</span>
 <span class="w">   </span><span class="p">],</span>
-<span class="w">   </span><span class="nt">&quot;_links&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;self&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;href&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/analytics/reports/audit?fromMillis=1561142523041&amp;toMillis=1561401723041&amp;objectType=LOGIN&amp;pageSize=5000&amp;startIndex=0&quot;</span>
+<span class="w">   </span><span class="nt">"_links"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"self"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">"href"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"/analytics/reports/audit?fromMillis=1561142523041&amp;toMillis=1561401723041&amp;objectType=LOGIN&amp;pageSize=5000&amp;startIndex=0"</span>
 <span class="w">      </span><span class="p">}</span>
 <span class="w">   </span><span class="p">},</span>
-<span class="w">   </span><span class="nt">&quot;headerArg&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">      </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="s2">&quot;&quot;</span>
+<span class="w">   </span><span class="nt">"headerArg"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">""</span>
 <span class="w">   </span><span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -18207,7 +18207,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "header.autohide", "navigation.header", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../js/timeago.min.js"></script>
       

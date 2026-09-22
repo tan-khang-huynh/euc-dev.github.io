@@ -25,13 +25,13 @@
       
       
       <link rel="icon" href="../assets/logos/favicon-light.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
   <title>Omnissa Developer Portal</title>
 
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -17752,34 +17752,34 @@ Omnissa Identity Service is only available for new Workspace ONE tenants.</p>
 <h3 id="step-2-get-access-token-for-the-oauth-20-client">Step 2 - Get access token for the OAuth 2.0 Client<a class="headerlink" href="#step-2-get-access-token-for-the-oauth-20-client" title="Permanent link">&para;</a></h3>
 <p>An access token is required for authorization of the HTTP calls to the Omnissa Identity Service APIs.</p>
 <p>Once the OAuth 2.0 client is created, obtain an access token for the client using the client credentials flow defined in <a href="https://tools.ietf.org/html/rfc6749#section-4.4">OAuth 2.0 RFC 6749, section 4.4</a>.</p>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--location<span class="w"> </span>--request<span class="w"> </span>POST<span class="w"> </span><span class="s1">&#39;https://{baseURL}/acs/token&#39;</span><span class="w"> </span><span class="se">\</span>
---header<span class="w"> </span><span class="s1">&#39;Authorization: Basic {base64_encoded_client_credentials}&#39;</span><span class="w"> </span><span class="se">\</span>
---header<span class="w"> </span><span class="s1">&#39;Content-Type: application/x-www-form-urlencoded&#39;</span><span class="w"> </span><span class="se">\</span>
---data-urlencode<span class="w"> </span><span class="s1">&#39;grant_type=client_credentials&#39;</span>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--location<span class="w"> </span>--request<span class="w"> </span>POST<span class="w"> </span><span class="s1">'https://{baseURL}/acs/token'</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">'Authorization: Basic {base64_encoded_client_credentials}'</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">'Content-Type: application/x-www-form-urlencoded'</span><span class="w"> </span><span class="se">\</span>
+--data-urlencode<span class="w"> </span><span class="s1">'grant_type=client_credentials'</span>
 </code></pre></div>
 <p>Encode the client id and client secret from Step 1 in the format <code>{client_id}:{client_secret}</code> to Base64 format and use it in the "Authorization" header in the request.</p>
 <p>The response contains the generated client's access token ("access_token") used for authorization in the subsequent API calls, and the number of seconds the access token is valid. When you make calls to a REST API, include the access token in the "Authorization" header with the type "Bearer".</p>
 <p>The access token can be reused until it expires. The token time to live ("access_token_ttl") is set on client creation. When your access token expires, call the above API again to request a new one.</p>
 <h3 id="step-3-create-oauth-20-client-with-identity-provider-and-directory-admin-ruleset">Step 3 - Create OAuth 2.0 Client with Identity Provider and Directory Admin RuleSet<a class="headerlink" href="#step-3-create-oauth-20-client-with-identity-provider-and-directory-admin-ruleset" title="Permanent link">&para;</a></h3>
 <p>Next, create an OAuth 2.0 client for the tenant with the IDP_AND_DIRECTORY_ADMIN rule set. A client with the IDP_AND_DIRECTORY_ADMIN rule set is allowed to perform identity provider and directory CRUD operations.</p>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--location<span class="w"> </span>--request<span class="w"> </span>POST<span class="w"> </span><span class="s1">&#39;https://{baseURL}/acs/broker/oauth2-clients&#39;</span><span class="w"> </span><span class="se">\</span>
---header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
---header<span class="w"> </span><span class="s1">&#39;Accept: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
---header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer {access_token}&#39;</span><span class="w"> </span><span class="se">\</span>
---data-raw<span class="w"> </span><span class="s1">&#39;{</span>
-<span class="s1">&quot;client_id&quot;: &quot;my-auth-grant-client1&quot;,</span>
-<span class="s1">&quot;grant_types&quot;: [</span>
-<span class="s1">&quot;client_credentials&quot;</span>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--location<span class="w"> </span>--request<span class="w"> </span>POST<span class="w"> </span><span class="s1">'https://{baseURL}/acs/broker/oauth2-clients'</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">'Content-Type: application/json'</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">'Accept: application/json'</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">'Authorization: Bearer {access_token}'</span><span class="w"> </span><span class="se">\</span>
+--data-raw<span class="w"> </span><span class="s1">'{</span>
+<span class="s1">"client_id": "my-auth-grant-client1",</span>
+<span class="s1">"grant_types": [</span>
+<span class="s1">"client_credentials"</span>
 <span class="s1">],</span>
-<span class="s1">&quot;scope&quot;: [</span>
-<span class="s1">&quot;admin&quot;</span>
+<span class="s1">"scope": [</span>
+<span class="s1">"admin"</span>
 <span class="s1">],</span>
-<span class="s1">&quot;secret&quot;: &quot;my-auth-grant-client1-secret&quot;,</span>
-<span class="s1">&quot;access_token_ttl&quot;: 10080,</span>
-<span class="s1">&quot;refresh_token_ttl&quot;: 525600,</span>
-<span class="s1">&quot;refresh_token_idle_ttl&quot;: 525600,</span>
-<span class="s1">&quot;rule_set_names&quot;: [ &quot;IDP_AND_DIRECTORY_ADMIN&quot; ]</span>
-<span class="s1">}&#39;</span>
+<span class="s1">"secret": "my-auth-grant-client1-secret",</span>
+<span class="s1">"access_token_ttl": 10080,</span>
+<span class="s1">"refresh_token_ttl": 525600,</span>
+<span class="s1">"refresh_token_idle_ttl": 525600,</span>
+<span class="s1">"rule_set_names": [ "IDP_AND_DIRECTORY_ADMIN" ]</span>
+<span class="s1">}'</span>
 </code></pre></div>
 <p>Replace <code>{baseURL}</code> with your Workspace ONE tenant URL and <code>{access_token}</code> with the access token that you obtained in Step 2 for authorization. You can set the token time to live ("access_token_ttl") field which determines the lifespan for all access tokens acquired by the client.</p>
 <h3 id="step-4-get-access-token-for-the-oauth-20-client">Step 4 - Get access token for the OAuth 2.0 Client<a class="headerlink" href="#step-4-get-access-token-for-the-oauth-20-client" title="Permanent link">&para;</a></h3>
@@ -17806,12 +17806,12 @@ Omnissa Identity Service is only available for new Workspace ONE tenants.</p>
 <p>The API will fail and returns <code>HTTP 444 (No Response)</code> (with no response body) when the request <code>Host</code> header doesn't match the server FQDN.</p>
 <p>For all errors, the API returns an error response body that includes the error code and additional error message in the format below:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="nt">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;oauth2.client.with.client.id.already.exists&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OAuth2 Client with client id {client_id} already exists.&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;parameters&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;oauth2_client_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{client_id}&quot;</span>
+<span class="w">      </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"oauth2.client.with.client.id.already.exists"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OAuth2 Client with client id {client_id} already exists."</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"parameters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"oauth2_client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{client_id}"</span>
 <span class="w">      </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">]</span>
@@ -18073,7 +18073,7 @@ Omnissa Identity Service is only available for new Workspace ONE tenants.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "header.autohide", "navigation.header", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../js/timeago.min.js"></script>
       

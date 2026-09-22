@@ -25,13 +25,13 @@
       
       
       <link rel="icon" href="../../../../../assets/logos/favicon-light.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
   <title>Omnissa Developer Portal</title>
 
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -17961,7 +17961,7 @@
 <h3 id="example-enumerating-all-farms">Example: Enumerating all Farms<a class="headerlink" href="#example-enumerating-all-farms" title="Permanent link">&para;</a></h3>
 <p>This example demonstrates how to handle the results from the QueryResults or Query objects. This will be omitted in the remaining examples.</p>
 <div class="highlight"><pre><span></span><code>QueryDefinition defn = new QueryDefinition();
-defn.setQueryEntityType(new TypeNameImpl(&quot;FarmInfo&quot;));
+defn.setQueryEntityType(new TypeNameImpl("FarmInfo"));
 QueryResults queryResults = queryService.create(defn);
 
 // Handle results
@@ -17994,8 +17994,8 @@ for (FarmInfo info : query) {
 </code></pre></div>
 <h3 id="example-list-enabled-rds-servers">Example: List enabled RDS Servers<a class="headerlink" href="#example-list-enabled-rds-servers" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>QueryDefinition defn = new QueryDefinition();
-defn.setQueryEntityType(new TypeNameImpl(&quot;RDSServerInfo&quot;));
-defn.setFilter(new Equals(&quot;settings.enabled&quot;, true));
+defn.setQueryEntityType(new TypeNameImpl("RDSServerInfo"));
+defn.setFilter(new Equals("settings.enabled", true));
 QueryResults queryResults = queryService.create(defn);
 // Handle results
 </code></pre></div>
@@ -18006,8 +18006,8 @@ try (Query&lt;RDSServerInfo&gt; query = new Query&lt;&gt;(connection, RDSServerI
 </code></pre></div>
 <h3 id="example-list-desktops-by-name-in-descending-order">Example: List desktops (by name in descending order)<a class="headerlink" href="#example-list-desktops-by-name-in-descending-order" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>QueryDefinition defn = new QueryDefinition();
-defn.setQueryEntityType(new TypeNameImpl(&quot;DesktopSummaryView&quot;));
-defn.setSortBy(&quot;desktopSummaryData.name&quot;);
+defn.setQueryEntityType(new TypeNameImpl("DesktopSummaryView"));
+defn.setSortBy("desktopSummaryData.name");
 defn.setSortDescending(true);
 QueryResults queryResults = queryService.create(defn);
 // Handle results
@@ -18022,25 +18022,25 @@ try (Query&lt;DesktopSummaryView&gt; query = new Query&lt;&gt;(connection, Deskt
 <h3 id="example-virtual-list-query">Example: Virtual List query<a class="headerlink" href="#example-virtual-list-query" title="Permanent link">&para;</a></h3>
 <p>This example will retrieve the third page of 10 ApplicationInfo objects, without needing to access the first two pages.</p>
 <div class="highlight"><pre><span></span><code>QueryDefinition defn = new QueryDefinition();
-defn.setQueryEntityType(new TypeNameImpl(&quot;ApplicationInfo&quot;));
+defn.setQueryEntityType(new TypeNameImpl("ApplicationInfo"));
 defn.setStartingOffset(20);
 defn.setLimit(10);
 QueryResults queryResults = queryService.query(defn);
-// Handle results.  Don&#39;t need to delete query as there is no server side clean-up needed.
+// Handle results.  Don't need to delete query as there is no server side clean-up needed.
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>QueryControls controls = new QueryControls();
 controls.setStartingOffset(20);
 controls.setLimit(10);
 Query&lt;ApplicationInfo&gt; query = Query.query(connection, ApplicationInfo.class, null, controls);
-// Handle results.  Don&#39;t need to close query as there is no server side clean-up needed.
+// Handle results.  Don't need to close query as there is no server side clean-up needed.
 </code></pre></div>
 <h3 id="example-count-persistent-disks-with-names-starting-with-a">Example: Count persistent disks with names starting with "a"<a class="headerlink" href="#example-count-persistent-disks-with-names-starting-with-a" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>QueryDefinition defn = new QueryDefinition();
-defn.setQueryEntityType(new TypeNameImpl(&quot;PersistentDiskInfo&quot;));
-defn.setFilter(new StartsWith(&quot;general.name&quot;, &quot;a&quot;));
+defn.setQueryEntityType(new TypeNameImpl("PersistentDiskInfo"));
+defn.setFilter(new StartsWith("general.name", "a"));
 int count = queryService.getCount(defn);
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>QueryFilter filter = QueryFilter.startsWith(PersistentDiskInfoCName.PERSISTENT_DISK_INFO_CNAME.general.name, &quot;a&quot;);
+<div class="highlight"><pre><span></span><code>QueryFilter filter = QueryFilter.startsWith(PersistentDiskInfoCName.PERSISTENT_DISK_INFO_CNAME.general.name, "a");
 int count = Query.count(connection, PersistentDiskInfo.class, filter);
 </code></pre></div>
 <p><a href="../">Back to Home</a></p>
@@ -18296,7 +18296,7 @@ int count = Query.count(connection, PersistentDiskInfo.class, filter);
       <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "header.autohide", "navigation.header", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../../../js/timeago.min.js"></script>
       

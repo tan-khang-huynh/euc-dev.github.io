@@ -25,13 +25,13 @@
       
       
       <link rel="icon" href="../../../assets/logos/favicon-light.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
   <title>Omnissa Developer Portal</title>
 
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -18078,15 +18078,15 @@ To configure event database, goto 'Event Database Configuration' tab in Horizon 
 </code></pre></div>
 <p>Connecting to the database with default username configured on Connection Server $hvServer.</p>
 <h3 id="example-2">EXAMPLE 2<a class="headerlink" href="#example-2" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nv">$hvDbServer</span> <span class="p">=</span> <span class="nb">Connect-HVEvent</span> <span class="n">-HvServer</span> <span class="nv">$hvServer</span> <span class="n">-DbUserName</span> <span class="s1">&#39;system&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="nv">$hvDbServer</span> <span class="p">=</span> <span class="nb">Connect-HVEvent</span> <span class="n">-HvServer</span> <span class="nv">$hvServer</span> <span class="n">-DbUserName</span> <span class="s1">'system'</span>
 </code></pre></div>
 <p>Connecting to the database configured on Connection Server $hvServer with customised user name 'system'.</p>
 <h3 id="example-3">EXAMPLE 3<a class="headerlink" href="#example-3" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nv">$hvDbServer</span> <span class="p">=</span> <span class="nb">Connect-HVEvent</span> <span class="n">-HvServer</span> <span class="nv">$hvServer</span> <span class="n">-DbUserName</span> <span class="s1">&#39;system&#39;</span> <span class="n">-DbPassword</span> <span class="s1">&#39;censored&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="nv">$hvDbServer</span> <span class="p">=</span> <span class="nb">Connect-HVEvent</span> <span class="n">-HvServer</span> <span class="nv">$hvServer</span> <span class="n">-DbUserName</span> <span class="s1">'system'</span> <span class="n">-DbPassword</span> <span class="s1">'censored'</span>
 </code></pre></div>
 <p>Connecting to the database with customised user name and password.</p>
 <h3 id="example-4">EXAMPLE 4<a class="headerlink" href="#example-4" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nv">$password</span> <span class="p">=</span> <span class="nb">Read-Host</span> <span class="s1">&#39;Database Password&#39;</span> <span class="n">-AsSecureString</span>
+<div class="highlight"><pre><span></span><code><span class="nv">$password</span> <span class="p">=</span> <span class="nb">Read-Host</span> <span class="s1">'Database Password'</span> <span class="n">-AsSecureString</span>
 </code></pre></div>
 <p>$hvDbServer = Connect-HVEvent -HvServer $hvServer -DbUserName 'system' -DbPassword $password
 Connecting to the database with customised user name and password, with password being a SecureString.</p>
@@ -18415,7 +18415,7 @@ If not passed, default database user name on the Connection Server will be used.
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "header.autohide", "navigation.header", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../js/timeago.min.js"></script>
       

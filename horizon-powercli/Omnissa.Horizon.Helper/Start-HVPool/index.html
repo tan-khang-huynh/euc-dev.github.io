@@ -25,13 +25,13 @@
       
       
       <link rel="icon" href="../../../assets/logos/favicon-light.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
   <title>Omnissa Developer Portal</title>
 
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -18522,24 +18522,24 @@
 Push image and Cancel image tasks only applies for instant clone pool.</p>
 <h2 id="examples">EXAMPLES<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <h3 id="example-1">EXAMPLE 1<a class="headerlink" href="#example-1" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>Start-HVPool -Recompose -Pool &#39;LCPool3&#39; -LogoffSetting FORCE_LOGOFF -ParentVM &#39;View-Agent-Win8&#39; -SnapshotVM &#39;Snap_USB&#39;
+<div class="highlight"><pre><span></span><code>Start-HVPool -Recompose -Pool 'LCPool3' -LogoffSetting FORCE_LOGOFF -ParentVM 'View-Agent-Win8' -SnapshotVM 'Snap_USB'
 </code></pre></div>
 <p>Requests a recompose of machines in the specified pool</p>
 <h3 id="example-2">EXAMPLE 2<a class="headerlink" href="#example-2" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>Start-HVPool -Refresh -Pool &#39;LCPool3&#39; -LogoffSetting FORCE_LOGOFF -Confirm:$false
+<div class="highlight"><pre><span></span><code>Start-HVPool -Refresh -Pool 'LCPool3' -LogoffSetting FORCE_LOGOFF -Confirm:$false
 </code></pre></div>
 <p>Requests a refresh of machines in the specified pool</p>
 <h3 id="example-3">EXAMPLE 3<a class="headerlink" href="#example-3" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>$myTime = Get-Date &#39;10/03/2016 12:30:00&#39;
+<div class="highlight"><pre><span></span><code>$myTime = Get-Date '10/03/2016 12:30:00'
 </code></pre></div>
 <p>Start-HVPool -Rebalance -Pool 'LCPool3' -LogoffSetting FORCE_LOGOFF -StartTime $myTime
 Requests a rebalance of machines in a pool with specified time</p>
 <h3 id="example-4">EXAMPLE 4<a class="headerlink" href="#example-4" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>Start-HVPool -SchedulePushImage -Pool &#39;InstantPool&#39; -LogoffSetting FORCE_LOGOFF -ParentVM &#39;InsParentVM&#39; -SnapshotVM &#39;InsSnapshotVM&#39;
+<div class="highlight"><pre><span></span><code>Start-HVPool -SchedulePushImage -Pool 'InstantPool' -LogoffSetting FORCE_LOGOFF -ParentVM 'InsParentVM' -SnapshotVM 'InsSnapshotVM'
 </code></pre></div>
 <p>Requests an update of push image operation on the specified Instant Clone Engine sourced pool</p>
 <h3 id="example-5">EXAMPLE 5<a class="headerlink" href="#example-5" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>Start-HVPool -CancelPushImage -Pool &#39;InstantPool&#39;
+<div class="highlight"><pre><span></span><code>Start-HVPool -CancelPushImage -Pool 'InstantPool'
 </code></pre></div>
 <p>Requests a cancellation of the current scheduled push image operation on the specified Instant Clone Engine sourced pool</p>
 <h2 id="parameters">PARAMETERS<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
@@ -19061,7 +19061,7 @@ The cmdlet is not run.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "header.autohide", "navigation.header", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../js/timeago.min.js"></script>
       

@@ -25,13 +25,13 @@
       
       
       <link rel="icon" href="../../../assets/logos/favicon-light.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
   <title>Omnissa Developer Portal</title>
 
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -18182,15 +18182,15 @@
 <p>Creates a application pool from Pre-installed applications on RDS Server(s).</p>
 <h2 id="examples">EXAMPLES<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <h3 id="example-1">EXAMPLE 1<a class="headerlink" href="#example-1" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>New-HVPreInstalledApplication -ApplicationName &#39;App1&#39; -DisplayName &#39;DisplayName&#39; -FarmName &#39;FarmName&#39;
+<div class="highlight"><pre><span></span><code>New-HVPreInstalledApplication -ApplicationName 'App1' -DisplayName 'DisplayName' -FarmName 'FarmName'
 </code></pre></div>
 <p>Creates a application App1 from the farm specified.</p>
 <h3 id="example-2">EXAMPLE 2<a class="headerlink" href="#example-2" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>New-HVPreInstalledApplication -ApplicationName &#39;App2&#39; -FarmName FarmManual -EnablePreLaunch $True
+<div class="highlight"><pre><span></span><code>New-HVPreInstalledApplication -ApplicationName 'App2' -FarmName FarmManual -EnablePreLaunch $True
 </code></pre></div>
 <p>Creates a application App2 from the farm specified and the PreLaunch option will be enabled.</p>
 <h3 id="example-3">EXAMPLE 3<a class="headerlink" href="#example-3" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>New-HVPreInstalledApplication -ApplicationName &#39;Excel 2016&#39; -ApplicationID &#39;Excel-2016&#39; -DisplayName &#39;Excel&#39; -FarmName &#39;RDS-FARM-01&#39;
+<div class="highlight"><pre><span></span><code>New-HVPreInstalledApplication -ApplicationName 'Excel 2016' -ApplicationID 'Excel-2016' -DisplayName 'Excel' -FarmName 'RDS-FARM-01'
 </code></pre></div>
 <p>Creates an application, Excel-2016, from the farm RDS-FARM-01.
 The application will display as 'Excel' to the end user.</p>
@@ -18218,7 +18218,7 @@ If ApplicationID is not specified, it will be set to match the ApplicationName, 
 
 <span class="nt">Required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span>
 <span class="nt">Position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Named</span>
-<span class="nt">Default value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$($ApplicationName -replace &quot; &quot;,&quot;_&quot;)</span>
+<span class="nt">Default value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$($ApplicationName -replace " ","_")</span>
 <span class="nt">Accept pipeline input</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True (ByValue)</span>
 <span class="nt">Accept wildcard characters</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span>
 </code></pre></div>
@@ -18598,7 +18598,7 @@ Currently it is valid for RDSH pools.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "header.autohide", "navigation.header", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../js/timeago.min.js"></script>
       

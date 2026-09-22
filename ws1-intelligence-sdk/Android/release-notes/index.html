@@ -25,13 +25,13 @@
       
       
       <link rel="icon" href="../../../assets/logos/favicon-light.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
   <title>Omnissa Developer Portal</title>
 
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -19557,28 +19557,28 @@
 <span class="cm"> * IntelligenceSDK is agnostic to the configuration delivery mechanism as long as the payload conforms to</span>
 <span class="cm"> * the required format.</span>
 <span class="cm"> * Example of a privacy configuration:</span>
-<span class="cm"> *  &quot;DEXData&quot;: {</span>
-<span class="cm"> *      &quot;Version&quot;: 1.0,</span>
-<span class="cm"> *      &quot;BatteryData&quot;: {</span>
-<span class="cm"> *          &quot;DisableAll&quot;: false,</span>
-<span class="cm"> *          &quot;AttributesToDisable&quot;: [&quot;plugged_type&quot;, &quot;battery_charging_rate&quot;],</span>
-<span class="cm"> *          &quot;EventsToDisable&quot;: []</span>
+<span class="cm"> *  "DEXData": {</span>
+<span class="cm"> *      "Version": 1.0,</span>
+<span class="cm"> *      "BatteryData": {</span>
+<span class="cm"> *          "DisableAll": false,</span>
+<span class="cm"> *          "AttributesToDisable": ["plugged_type", "battery_charging_rate"],</span>
+<span class="cm"> *          "EventsToDisable": []</span>
 <span class="cm"> *      },</span>
-<span class="cm"> *      &quot;DeviceData&quot;: {</span>
-<span class="cm"> *          &quot;DisableAll&quot;: false,</span>
-<span class="cm"> *          &quot;AttributesToDisable&quot;: [&quot;location_latitude&quot;, &quot;location_longitude&quot;],</span>
-<span class="cm"> *          &quot;EventsToDisable&quot;: []</span>
+<span class="cm"> *      "DeviceData": {</span>
+<span class="cm"> *          "DisableAll": false,</span>
+<span class="cm"> *          "AttributesToDisable": ["location_latitude", "location_longitude"],</span>
+<span class="cm"> *          "EventsToDisable": []</span>
 <span class="cm"> *      },</span>
-<span class="cm"> *      &quot;NetworkData&quot;: {</span>
-<span class="cm"> *          &quot;DisableAll&quot;: false,</span>
-<span class="cm"> *          &quot;AttributesToDisable&quot;: [&quot;jitter&quot;, &quot;latency&quot;],</span>
-<span class="cm"> *          &quot;EventsToDisable&quot;: []</span>
+<span class="cm"> *      "NetworkData": {</span>
+<span class="cm"> *          "DisableAll": false,</span>
+<span class="cm"> *          "AttributesToDisable": ["jitter", "latency"],</span>
+<span class="cm"> *          "EventsToDisable": []</span>
 <span class="cm"> *      }</span>
 <span class="cm"> *  }</span>
 <span class="cm"> *</span>
 <span class="cm"> * @param privacyConfig Map containing the necessary key value pairs for parsing the privacy config. If the privacy</span>
-<span class="cm"> *                      config is fetched via WS1 UEM SDK, then it is in the JSON format. Apps / SDK&#39;s are expected</span>
-<span class="cm"> *                      to fetch the value for key &quot;DEXData&quot; and convert it into a map. If the property &quot;DEXData&quot;</span>
+<span class="cm"> *                      config is fetched via WS1 UEM SDK, then it is in the JSON format. Apps / SDK's are expected</span>
+<span class="cm"> *                      to fetch the value for key "DEXData" and convert it into a map. If the property "DEXData"</span>
 <span class="cm"> *                      and its value does not exist, apps are still required to call this API with a null value for</span>
 <span class="cm"> *                      the privacyConfig parameter.</span>
 <span class="cm"> * @param feature       The Feature classification of the data to be exported, eg. DEX, ZeroTrust.</span>
@@ -19614,7 +19614,7 @@ IntelligenceSDK using the following structure:</p>
 
 <span class="w">   </span><span class="n">repositories</span><span class="w"> </span><span class="o">{</span>
 <span class="w">       </span><span class="n">maven</span><span class="w"> </span><span class="o">{</span>
-<span class="w">           </span><span class="n">url</span><span class="w"> </span><span class="n">uri</span><span class="o">(</span><span class="s2">&quot;/PATH/TO/FOLDER/ws1-intelligence-sdk-repository&quot;</span><span class="o">)</span>
+<span class="w">           </span><span class="n">url</span><span class="w"> </span><span class="n">uri</span><span class="o">(</span><span class="s2">"/PATH/TO/FOLDER/ws1-intelligence-sdk-repository"</span><span class="o">)</span>
 <span class="w">       </span><span class="o">}</span>
 <span class="w">       </span><span class="n">mavenCentral</span><span class="o">()</span>
 <span class="w">       </span><span class="n">google</span><span class="o">()</span>
@@ -19622,17 +19622,17 @@ IntelligenceSDK using the following structure:</p>
 
 <span class="w">   </span><span class="n">android</span><span class="w"> </span><span class="o">{</span>
 <span class="w">      </span><span class="n">packagingOptions</span><span class="w"> </span><span class="o">{</span>
-<span class="w">           </span><span class="n">pickFirst</span><span class="w"> </span><span class="s1">&#39;**/libc++_shared.so&#39;</span>
-<span class="w">           </span><span class="n">pickFirst</span><span class="w"> </span><span class="s1">&#39;**/libcrypto.1.0.2.so&#39;</span>
-<span class="w">           </span><span class="n">pickFirst</span><span class="w"> </span><span class="s1">&#39;**/libssl.1.0.2.so&#39;</span>
+<span class="w">           </span><span class="n">pickFirst</span><span class="w"> </span><span class="s1">'**/libc++_shared.so'</span>
+<span class="w">           </span><span class="n">pickFirst</span><span class="w"> </span><span class="s1">'**/libcrypto.1.0.2.so'</span>
+<span class="w">           </span><span class="n">pickFirst</span><span class="w"> </span><span class="s1">'**/libssl.1.0.2.so'</span>
 <span class="w">       </span><span class="o">}</span>
 <span class="w">   </span><span class="o">}</span>
 
-<span class="w">   </span><span class="kt">def</span><span class="w"> </span><span class="n">ws1IntelSdkVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;24.11.0&quot;</span>
+<span class="w">   </span><span class="kt">def</span><span class="w"> </span><span class="n">ws1IntelSdkVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"24.11.0"</span>
 
 <span class="w">   </span><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
 <span class="w">       </span><span class="c1">// Declare a dependency on the Intelligence SDK</span>
-<span class="w">       </span><span class="n">implementation</span><span class="w"> </span><span class="s2">&quot;com.ws1:ws1intelligencesdk:$ws1IntelSdkVersion&quot;</span>
+<span class="w">       </span><span class="n">implementation</span><span class="w"> </span><span class="s2">"com.ws1:ws1intelligencesdk:$ws1IntelSdkVersion"</span>
 <span class="w">   </span><span class="o">}</span>
 </code></pre></div>
 <h3 id="resolved-issues_3">Resolved Issues<a class="headerlink" href="#resolved-issues_3" title="Permanent link">&para;</a></h3>
@@ -19697,7 +19697,7 @@ Users are now able to export data collected from the Telemetry Features they hav
 <span class="w">    </span><span class="c1">// Callback method for export. Data parameter will either have formatted Telemetry</span>
 <span class="w">    </span><span class="c1">// data or be null if an issue occurs. </span>
 <span class="w">    </span><span class="n">override</span><span class="w"> </span><span class="n">fun</span><span class="w"> </span><span class="nf">onDataExport</span><span class="p">(</span><span class="n">data</span><span class="p">:</span><span class="w"> </span><span class="n">String</span><span class="o">?</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Log</span><span class="p">.</span><span class="na">d</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Here is my exported data: ${data ?: &quot;</span><span class="n">An</span><span class="w"> </span><span class="n">issue</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">occurred</span><span class="p">.</span><span class="s">&quot;}&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="n">Log</span><span class="p">.</span><span class="na">d</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="s">"Here is my exported data: ${data ?: "</span><span class="n">An</span><span class="w"> </span><span class="n">issue</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">occurred</span><span class="p">.</span><span class="s">"}"</span><span class="p">)</span>
 <span class="w">      </span><span class="p">}</span><span class="w"> </span>
 <span class="w">  </span><span class="p">}</span>
 <span class="w">  </span><span class="n">Crittercism</span><span class="p">.</span><span class="na">exportTelemetryFeatureData</span><span class="p">(</span>
@@ -20012,7 +20012,7 @@ Users are now able to export data collected from the Telemetry Features they hav
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "header.autohide", "navigation.header", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../js/timeago.min.js"></script>
       

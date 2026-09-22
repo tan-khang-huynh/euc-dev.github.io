@@ -25,13 +25,13 @@
       
       
       <link rel="icon" href="../../../assets/logos/favicon-light.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
   <title>Omnissa Developer Portal</title>
 
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -17756,7 +17756,7 @@
 <span class="cm">/**</span>
 <span class="cm"> * Get Image Data and read response</span>
 <span class="cm"> */</span>
-<span class="w">    </span><span class="n">val</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;http://httpbin.org/image&quot;</span>
+<span class="w">    </span><span class="n">val</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"http://httpbin.org/image"</span>
 <span class="w">    </span><span class="n">val</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">InstrumentedHttpUrlConnection</span><span class="p">(</span><span class="n">URL</span><span class="p">(</span><span class="n">url</span><span class="p">))</span>
 
 <span class="w">    </span><span class="n">val</span><span class="w"> </span><span class="n">bout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ByteArrayOutputStream</span><span class="p">()</span>
@@ -17767,7 +17767,7 @@
 <span class="w">            </span><span class="n">bout</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="p">)</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="p">(</span><span class="n">exception</span><span class="p">:</span><span class="w"> </span><span class="n">Exception</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Log</span><span class="p">.</span><span class="na">e</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Error occurred during image request&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="n">Log</span><span class="p">.</span><span class="na">e</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="s">"Error occurred during image request"</span><span class="p">)</span>
 <span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">connection</span><span class="p">.</span><span class="na">disconnect</span><span class="p">()</span>
 <span class="w">    </span><span class="p">}</span>
@@ -17775,28 +17775,28 @@
 <span class="w"> </span><span class="cm">/**</span>
 <span class="cm"> * Post Data using InstrumentedOutputStream and read response</span>
 <span class="cm"> */</span>
-<span class="w">    </span><span class="n">val</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">InstrumentedHttpUrlConnection</span><span class="p">(</span><span class="n">URL</span><span class="p">(</span><span class="s">&quot;https://reqres.in/api/users&quot;</span><span class="p">))</span>
-<span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="na">requestMethod</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;POST&quot;</span>
-<span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="na">setRequestProperty</span><span class="p">(</span><span class="s">&quot;Content-Type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;application/json&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="na">setRequestProperty</span><span class="p">(</span><span class="s">&quot;Accept&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;application/json&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">val</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">InstrumentedHttpUrlConnection</span><span class="p">(</span><span class="n">URL</span><span class="p">(</span><span class="s">"https://reqres.in/api/users"</span><span class="p">))</span>
+<span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="na">requestMethod</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"POST"</span>
+<span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="na">setRequestProperty</span><span class="p">(</span><span class="s">"Content-Type"</span><span class="p">,</span><span class="w"> </span><span class="s">"application/json"</span><span class="p">)</span>
+<span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="na">setRequestProperty</span><span class="p">(</span><span class="s">"Accept"</span><span class="p">,</span><span class="w"> </span><span class="s">"application/json"</span><span class="p">)</span>
 <span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="na">doOutput</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
-<span class="w">    </span><span class="n">val</span><span class="w"> </span><span class="n">jsonInputString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;{\&quot;name\&quot;: \&quot;Lain\&quot;, \&quot;job\&quot;: \&quot;Programmer\&quot;}&quot;</span>
+<span class="w">    </span><span class="n">val</span><span class="w"> </span><span class="n">jsonInputString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"{\"name\": \"Lain\", \"job\": \"Programmer\"}"</span>
 
 <span class="w">    </span><span class="c1">// Use InstrumentedOutputStream to Post data</span>
 <span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="na">outputStream</span><span class="p">.</span><span class="na">use</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">os</span><span class="w"> </span><span class="o">-&gt;</span>
-<span class="w">        </span><span class="n">val</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jsonInputString</span><span class="p">.</span><span class="na">toByteArray</span><span class="p">(</span><span class="n">charset</span><span class="p">(</span><span class="s">&quot;utf-8&quot;</span><span class="p">))</span>
+<span class="w">        </span><span class="n">val</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jsonInputString</span><span class="p">.</span><span class="na">toByteArray</span><span class="p">(</span><span class="n">charset</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">))</span>
 <span class="w">        </span><span class="n">os</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">input</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">size</span><span class="p">)</span>
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="c1">// Get our response</span>
-<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">""</span>
 <span class="w">    </span><span class="n">BufferedReader</span><span class="p">(</span>
-<span class="w">        </span><span class="n">InputStreamReader</span><span class="p">(</span><span class="n">connection</span><span class="p">.</span><span class="na">inputStream</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;utf-8&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="n">InputStreamReader</span><span class="p">(</span><span class="n">connection</span><span class="p">.</span><span class="na">inputStream</span><span class="p">,</span><span class="w"> </span><span class="s">"utf-8"</span><span class="p">)</span>
 <span class="w">    </span><span class="p">).</span><span class="na">use</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">br</span><span class="w"> </span><span class="o">-&gt;</span>
 <span class="w">        </span><span class="n">val</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StringBuilder</span><span class="p">()</span>
 <span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="n">responseLine</span><span class="p">:</span><span class="w"> </span><span class="n">String</span><span class="o">?</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span>
 <span class="w">        </span><span class="nf">while</span><span class="w"> </span><span class="p">(</span><span class="n">br</span><span class="p">.</span><span class="na">readLine</span><span class="p">().</span><span class="na">also</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">responseLine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">response</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">responseLine</span><span class="o">!!</span><span class="p">.</span><span class="na">trim</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="w"> </span><span class="p">})</span>
+<span class="w">            </span><span class="n">response</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">responseLine</span><span class="o">!!</span><span class="p">.</span><span class="na">trim</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="sc">' '</span><span class="w"> </span><span class="p">})</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">        </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">response</span><span class="p">.</span><span class="na">toString</span><span class="p">()</span>
 <span class="w">    </span><span class="p">}</span>
@@ -17838,7 +17838,7 @@
 <span class="cm">/**</span>
 <span class="cm"> * Get Image Data and read response</span>
 <span class="cm"> */</span>
-<span class="w">    </span><span class="n">val</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;https://httpbin.org/image&quot;</span>
+<span class="w">    </span><span class="n">val</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"https://httpbin.org/image"</span>
 <span class="w">    </span><span class="n">val</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">InstrumentedHttpsUrlConnection</span><span class="p">(</span><span class="n">URL</span><span class="p">(</span><span class="n">url</span><span class="p">))</span>
 
 <span class="w">    </span><span class="n">val</span><span class="w"> </span><span class="n">bout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ByteArrayOutputStream</span><span class="p">()</span>
@@ -17849,7 +17849,7 @@
 <span class="w">            </span><span class="n">bout</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="p">)</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="p">(</span><span class="n">exception</span><span class="p">:</span><span class="w"> </span><span class="n">Exception</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Log</span><span class="p">.</span><span class="na">e</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Error occurred during image request&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="n">Log</span><span class="p">.</span><span class="na">e</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="s">"Error occurred during image request"</span><span class="p">)</span>
 <span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">connection</span><span class="p">.</span><span class="na">disconnect</span><span class="p">()</span>
 <span class="w">    </span><span class="p">}</span>
@@ -17857,28 +17857,28 @@
 <span class="w"> </span><span class="cm">/**</span>
 <span class="cm"> * Post Data using InstrumentedOutputStream and read response</span>
 <span class="cm"> */</span>
-<span class="w">    </span><span class="n">val</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">InstrumentedHttpsUrlConnection</span><span class="p">(</span><span class="n">URL</span><span class="p">(</span><span class="s">&quot;https://reqres.in/api/users&quot;</span><span class="p">))</span>
-<span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="na">requestMethod</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;POST&quot;</span>
-<span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="na">setRequestProperty</span><span class="p">(</span><span class="s">&quot;Content-Type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;application/json&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="na">setRequestProperty</span><span class="p">(</span><span class="s">&quot;Accept&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;application/json&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">val</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">InstrumentedHttpsUrlConnection</span><span class="p">(</span><span class="n">URL</span><span class="p">(</span><span class="s">"https://reqres.in/api/users"</span><span class="p">))</span>
+<span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="na">requestMethod</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"POST"</span>
+<span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="na">setRequestProperty</span><span class="p">(</span><span class="s">"Content-Type"</span><span class="p">,</span><span class="w"> </span><span class="s">"application/json"</span><span class="p">)</span>
+<span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="na">setRequestProperty</span><span class="p">(</span><span class="s">"Accept"</span><span class="p">,</span><span class="w"> </span><span class="s">"application/json"</span><span class="p">)</span>
 <span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="na">doOutput</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
-<span class="w">    </span><span class="n">val</span><span class="w"> </span><span class="n">jsonInputString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;{\&quot;name\&quot;: \&quot;Lain\&quot;, \&quot;job\&quot;: \&quot;Programmer\&quot;}&quot;</span>
+<span class="w">    </span><span class="n">val</span><span class="w"> </span><span class="n">jsonInputString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"{\"name\": \"Lain\", \"job\": \"Programmer\"}"</span>
 
 <span class="w">    </span><span class="c1">// Use InstrumentedOutputStream to Post data</span>
 <span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="na">outputStream</span><span class="p">.</span><span class="na">use</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">os</span><span class="w"> </span><span class="o">-&gt;</span>
-<span class="w">        </span><span class="n">val</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jsonInputString</span><span class="p">.</span><span class="na">toByteArray</span><span class="p">(</span><span class="n">charset</span><span class="p">(</span><span class="s">&quot;utf-8&quot;</span><span class="p">))</span>
+<span class="w">        </span><span class="n">val</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jsonInputString</span><span class="p">.</span><span class="na">toByteArray</span><span class="p">(</span><span class="n">charset</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">))</span>
 <span class="w">        </span><span class="n">os</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">input</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">size</span><span class="p">)</span>
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="c1">// Get our response</span>
-<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">""</span>
 <span class="w">    </span><span class="n">BufferedReader</span><span class="p">(</span>
-<span class="w">        </span><span class="n">InputStreamReader</span><span class="p">(</span><span class="n">connection</span><span class="p">.</span><span class="na">inputStream</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;utf-8&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="n">InputStreamReader</span><span class="p">(</span><span class="n">connection</span><span class="p">.</span><span class="na">inputStream</span><span class="p">,</span><span class="w"> </span><span class="s">"utf-8"</span><span class="p">)</span>
 <span class="w">    </span><span class="p">).</span><span class="na">use</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">br</span><span class="w"> </span><span class="o">-&gt;</span>
 <span class="w">        </span><span class="n">val</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StringBuilder</span><span class="p">()</span>
 <span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="n">responseLine</span><span class="p">:</span><span class="w"> </span><span class="n">String</span><span class="o">?</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span>
 <span class="w">        </span><span class="nf">while</span><span class="w"> </span><span class="p">(</span><span class="n">br</span><span class="p">.</span><span class="na">readLine</span><span class="p">().</span><span class="na">also</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">responseLine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">response</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">responseLine</span><span class="o">!!</span><span class="p">.</span><span class="na">trim</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="w"> </span><span class="p">})</span>
+<span class="w">            </span><span class="n">response</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">responseLine</span><span class="o">!!</span><span class="p">.</span><span class="na">trim</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="sc">' '</span><span class="w"> </span><span class="p">})</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">        </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">response</span><span class="p">.</span><span class="na">toString</span><span class="p">()</span>
 <span class="w">    </span><span class="p">}</span>
@@ -18146,7 +18146,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "header.autohide", "navigation.header", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../js/timeago.min.js"></script>
       

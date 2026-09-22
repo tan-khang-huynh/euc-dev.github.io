@@ -21,13 +21,13 @@
       
       
       <link rel="icon" href="../../../../../assets/logos/favicon-light.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
   <title>Omnissa Developer Portal</title>
 
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -18159,7 +18159,7 @@ RDPVCBridge on the agent side. The application and RDPVCBridge run in the same p
 <li>
 <p>Include the <code>vdp_rdpvcbridge.h</code> header file from the RDPVCBridge SDK. For example:
     <div class="highlight"><pre><span></span><code>#define MAP_RDPVCBRIDGE
-#include &quot;vdp_rdpvcbridge.h&quot;
+#include "vdp_rdpvcbridge.h"
 </code></pre></div></p>
 </li>
 <li>
@@ -18199,7 +18199,7 @@ RDPVCBridge on the agent side. The application and RDPVCBridge run in the same p
 <p>For example, you have a virtual channel application called <code>VChanApp</code> and <code>vchan-app-client.dll</code> is the client-side plug-in. The location of <code>vchan-app-client.dll</code> is <code>C:\VChanApp\vchan-app-client.dll</code>. </p>
 <p>You must add the following registry key and values:
 <div class="highlight"><pre><span></span><code>[HKEY_CURRENT_USER\Software\Microsoft\Terminal Server Client\Default\AddIns\VChanApp]
-&quot;Name&quot;=&quot;C:\\VChanApp\\vchan-app-
+"Name"="C:\\VChanApp\\vchan-app-
 </code></pre></div></p>
 <h4 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h4>
 <ol>
@@ -18319,11 +18319,11 @@ RDPVCBridge on the agent side. The application and RDPVCBridge run in the same p
 <div class="highlight"><pre><span></span><code>BOOL isSis;
 BOOL ok = VDP_IsNestedClient(WTS_CURRENT_SESSION, &amp;isSis); 
 if (!ok) {
-  LOG_MESSAGE(&quot;The VDP_IsNestedClient()failed\n&quot;);
+  LOG_MESSAGE("The VDP_IsNestedClient()failed\n");
 } else if (!isSis){ 
- LOG_MESSAGE(&quot;This client is in a nested session\n&quot;);
+ LOG_MESSAGE("This client is in a nested session\n");
 } else { 
-LOG_MESSAGE(&quot;This client a nested session\n&quot;);
+LOG_MESSAGE("This client a nested session\n");
 } 
 </code></pre></div></p>
 <h3 id="agent-side-api-functions">Agent-side API Functions<a class="headerlink" href="#agent-side-api-functions" title="Permanent link">&para;</a></h3>
@@ -18354,12 +18354,12 @@ BOOL ok = VDP_GetSDKVersion(WTS_CURRENT_SESSION,
         remoteVersionStr, remoteVersionStrLen, 
         &amp;remoteResultStrSize, &amp;remoteVersionNum);
 If (!ok) { 
- LOG_MESSAGE(&quot;VDP_GetSDKVersion () failed\n&quot;);
+ LOG_MESSAGE("VDP_GetSDKVersion () failed\n");
  } else { 
- LOG_MESSAGE(&quot;Local SDK version: v%d - v%s\n&quot;, localVersionNum, localVersionStr);
+ LOG_MESSAGE("Local SDK version: v%d - v%s\n", localVersionNum, localVersionStr);
 
  // Note: remoteVersionNum will be 0 if not in a Horizon session  if (remoteVersionNum != 0) { 
- LOG_MESSAGE(&quot;RemoteSDK version: v%d - v%s\n&quot;, 
+ LOG_MESSAGE("RemoteSDK version: v%d - v%s\n", 
  remoteVersionNum, remoteVersionStr); 
  } 
 } 
@@ -18385,9 +18385,9 @@ If (!ok) {
 </code></pre></div>
 Example:
 <div class="highlight"><pre><span></span><code>if (!VDP_IsHorizonSession(WTS_CURRENT_SESSION)) {
- LOG_MESSAGE(&quot;We are not currently in a Horizon Session! \n&quot;);
+ LOG_MESSAGE("We are not currently in a Horizon Session! \n");
 } else { 
- LOG_MESSAGE(&quot;Invoked from an ongoing Horizon session\n&quot;);  }
+ LOG_MESSAGE("Invoked from an ongoing Horizon session\n");  }
 </code></pre></div></p>
 <h4 id="vdp_isblastsession">VDP_IsBlastSession<a class="headerlink" href="#vdp_isblastsession" title="Permanent link">&para;</a></h4>
 <p>The Agent queries the local system to verify if it is running in a Blast session and returns a TRUE value if it is. </p>
@@ -18447,11 +18447,11 @@ This includes both Horizon and Microsoft RDP sessions. </p>
 <div class="highlight"><pre><span></span><code>BOOL isSis;
 BOOL ok = VDP_IsNestedSession(WTS_CURRENT_SESSION, &amp;isSis); 
 if (ok) {
-   LOG_MESSAGE(&quot;VDP_IsNestedSession() failed\n&quot;);
+   LOG_MESSAGE("VDP_IsNestedSession() failed\n");
 } else if (!isSis){ 
-   LOG_MESSAGE(&quot;The remote client is not in nested session.\n&quot;);
+   LOG_MESSAGE("The remote client is not in nested session.\n");
 } else {
-   LOG_MESSAGE(&quot;The remote client is in nested session.\n&quot;);
+   LOG_MESSAGE("The remote client is in nested session.\n");
 }
 </code></pre></div></p>
 <h2 id="dynamic-virtual-channel-api-support">Dynamic Virtual Channel API Support<a class="headerlink" href="#dynamic-virtual-channel-api-support" title="Permanent link">&para;</a></h2>
@@ -18520,11 +18520,11 @@ o Server: </strong>***-rdpvcbridge-<appName>-<sid>-<pid>__<date-time>.log </p>
 <ul>
 <li>Versions 2412 and later:
     <div class="highlight"><pre><span></span><code>[HKEY_LOCAL_MACHINE\SOFTWARE\Omnissa\Horizon\rdpvcbridge]
-&quot;LogLevel&quot;=&quot;trace&quot;
+"LogLevel"="trace"
 </code></pre></div></li>
 <li>Versions 2406 and earlier:
     <div class="highlight"><pre><span></span><code>[HKEY_LOCAL_MACHINE\SOFTWARE\******, Inc.\****** VDM\rdpvcbridge]
-&quot;LogLevel&quot;=&quot;trace&quot;
+"LogLevel"="trace"
 </code></pre></div></li>
 <li>Disconnect from the Horizon desktop, if you are connected, and start the session again.</li>
 </ul>
@@ -18651,7 +18651,7 @@ o Server: </strong>***-rdpvcbridge-<appName>-<sid>-<pid>__<date-time>.log </p>
 </li>
 <li>
 <p>Add the following line to the file and save it.
-    <div class="highlight"><pre><span></span><code>machine.id = &quot;vdi.broker.asmanaged=1&quot;
+    <div class="highlight"><pre><span></span><code>machine.id = "vdi.broker.asmanaged=1"
 </code></pre></div></p>
 </li>
 <li>
@@ -18946,7 +18946,7 @@ o Server: </strong>***-rdpvcbridge-<appName>-<sid>-<pid>__<date-time>.log </p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "header.autohide", "navigation.header", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../../../js/timeago.min.js"></script>
       

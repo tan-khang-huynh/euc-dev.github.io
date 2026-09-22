@@ -25,13 +25,13 @@
       
       
       <link rel="icon" href="../../../assets/logos/favicon-light.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
   <title>Omnissa Developer Portal</title>
 
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -19567,11 +19567,11 @@
 <p>Creates a new farm, the type would be determined based on input parameters.</p>
 <h2 id="examples">EXAMPLES<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <h3 id="example-1">EXAMPLE 1<a class="headerlink" href="#example-1" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>New-HVFarm -LinkedClone -FarmName &#39;LCFarmTest&#39; -ParentVM &#39;Win_Server_2012_R2&#39; -SnapshotVM &#39;Snap_RDS&#39; -VmFolder &#39;PoolVM&#39; -HostOrCluster &#39;cls&#39; -ResourcePool &#39;cls&#39; -Datastores &#39;datastore1 (5)&#39; -FarmDisplayName &#39;LC Farm Test&#39; -Description &#39;created LC Farm from PS&#39; -EnableProvisioning $true -StopProvisioningOnError $false -NamingPattern &quot;LCFarmVM_PS&quot; -MinReady 1 -MaximumCount 1  -SysPrepName &quot;RDSH_Cust2&quot; -NetBiosName &quot;adviewdev&quot;
+<div class="highlight"><pre><span></span><code>New-HVFarm -LinkedClone -FarmName 'LCFarmTest' -ParentVM 'Win_Server_2012_R2' -SnapshotVM 'Snap_RDS' -VmFolder 'PoolVM' -HostOrCluster 'cls' -ResourcePool 'cls' -Datastores 'datastore1 (5)' -FarmDisplayName 'LC Farm Test' -Description 'created LC Farm from PS' -EnableProvisioning $true -StopProvisioningOnError $false -NamingPattern "LCFarmVM_PS" -MinReady 1 -MaximumCount 1  -SysPrepName "RDSH_Cust2" -NetBiosName "adviewdev"
 </code></pre></div>
 <p>Creates new linkedClone farm by using naming pattern</p>
 <h3 id="example-2">EXAMPLE 2<a class="headerlink" href="#example-2" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>New-HVFarm -InstantClone -FarmName &#39;ICFarmCL&#39; -ParentVM &#39;vm-rdsh-ic&#39; -SnapshotVM &#39;Snap_5&#39; -VmFolder &#39;Instant_Clone_VMs&#39; -HostOrCluster &#39;vimal-cluster&#39; -ResourcePool &#39;vimal-cluster&#39; -Datastores &#39;datastore1&#39; -FarmDisplayName &#39;IC Farm using CL&#39; -Description &#39;created IC Farm from PS command-line&#39; -EnableProvisioning $true -StopProvisioningOnError $false -NamingPattern &quot;ICFarmCL-&quot; -NetBiosName &quot;ad-vimalg&quot;
+<div class="highlight"><pre><span></span><code>New-HVFarm -InstantClone -FarmName 'ICFarmCL' -ParentVM 'vm-rdsh-ic' -SnapshotVM 'Snap_5' -VmFolder 'Instant_Clone_VMs' -HostOrCluster 'vimal-cluster' -ResourcePool 'vimal-cluster' -Datastores 'datastore1' -FarmDisplayName 'IC Farm using CL' -Description 'created IC Farm from PS command-line' -EnableProvisioning $true -StopProvisioningOnError $false -NamingPattern "ICFarmCL-" -NetBiosName "ad-vimalg"
 </code></pre></div>
 <p>Creates new linkedClone farm by using naming pattern</p>
 <h3 id="example-3">EXAMPLE 3<a class="headerlink" href="#example-3" title="Permanent link">&para;</a></h3>
@@ -19583,11 +19583,11 @@
 </code></pre></div>
 <p>Creates new instantClone farm by using json file</p>
 <h3 id="example-5">EXAMPLE 5<a class="headerlink" href="#example-5" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>New-HVFarm -Manual -FarmName &quot;manualFarmTest&quot; -FarmDisplayName &quot;manualFarmTest&quot; -Description &quot;Manual PS Test&quot; -RdsServers &quot;vm-for-rds.eng.omnissa.com&quot;,&quot;vm-for-rds-2.eng.omnissa.com&quot; -Confirm:$false
+<div class="highlight"><pre><span></span><code>New-HVFarm -Manual -FarmName "manualFarmTest" -FarmDisplayName "manualFarmTest" -Description "Manual PS Test" -RdsServers "vm-for-rds.eng.omnissa.com","vm-for-rds-2.eng.omnissa.com" -Confirm:$false
 </code></pre></div>
 <p>Creates new manual farm by using rdsServers names</p>
 <h3 id="example-6">EXAMPLE 6<a class="headerlink" href="#example-6" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>New-HVFarm -Spec C:\Omnissa\Specs\AutomatedInstantCloneFarm.json -FarmName &#39;InsPool&#39; -NamingPattern &#39;InsFarm-&#39;
+<div class="highlight"><pre><span></span><code>New-HVFarm -Spec C:\Omnissa\Specs\AutomatedInstantCloneFarm.json -FarmName 'InsPool' -NamingPattern 'InsFarm-'
 </code></pre></div>
 <p>Creates new instant clone farm by reading few parameters from json and few parameters from command line.</p>
 <h2 id="parameters">PARAMETERS<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
@@ -20070,7 +20070,7 @@ The default value is farmName + '{n:fixed=4}'.</p>
 
 <span class="nt">Required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span>
 <span class="nt">Position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Named</span>
-<span class="nt">Default value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$farmName + &#39;{n:fixed=4}&#39;</span>
+<span class="nt">Default value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$farmName + '{n:fixed=4}'</span>
 <span class="nt">Accept pipeline input</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span>
 <span class="nt">Accept wildcard characters</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span>
 </code></pre></div>
@@ -20672,7 +20672,7 @@ The cmdlet is not run.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "header.autohide", "navigation.header", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../js/timeago.min.js"></script>
       

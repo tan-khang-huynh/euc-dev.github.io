@@ -25,13 +25,13 @@
       
       
       <link rel="icon" href="../../../assets/logos/favicon-light.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
   <title>Omnissa Developer Portal</title>
 
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -19847,25 +19847,25 @@
 <li>A new public API named - setPrivacyConfiguration has been introduced which helps inject privacy configuration to control transmission of certain TelemetrySDK attributes. API and its documentation is like below - </li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="c1">/// Function to help set privacy configuration for a particular telemetry type.</span>
-<span class="c1">/// -&gt; This configuration is ideally part of WS1 SDK&#39;s custom settings profile payload. However, IntelligenceSDK is agnostic to the configuration delivery mechanism as long</span>
+<span class="c1">/// -&gt; This configuration is ideally part of WS1 SDK's custom settings profile payload. However, IntelligenceSDK is agnostic to the configuration delivery mechanism as long</span>
 <span class="c1">///   as the payload conforms to the required format.</span>
 <span class="c1">/// -&gt; A sample privacy config is like below -</span>
-<span class="c1">/// &quot;DEXData&quot;: {</span>
-<span class="c1">///        &quot;Version&quot;: 1.0,</span>
-<span class="c1">///        &quot;BatteryData&quot;: {</span>
-<span class="c1">///            &quot;DisableAll&quot;: true,</span>
-<span class="c1">///            &quot;AttributesToDisable&quot;: [&quot;plugged_type&quot;, &quot;battery_charging_rate&quot;],</span>
-<span class="c1">///            &quot;EventsToDisable&quot;: []</span>
+<span class="c1">/// "DEXData": {</span>
+<span class="c1">///        "Version": 1.0,</span>
+<span class="c1">///        "BatteryData": {</span>
+<span class="c1">///            "DisableAll": true,</span>
+<span class="c1">///            "AttributesToDisable": ["plugged_type", "battery_charging_rate"],</span>
+<span class="c1">///            "EventsToDisable": []</span>
 <span class="c1">///        },</span>
-<span class="c1">///        &quot;DeviceData&quot;: {</span>
-<span class="c1">///            &quot;DisableAll&quot;: true,</span>
-<span class="c1">///            &quot;AttributesToDisable&quot;: [&quot;location_latitude&quot;, &quot;location_longitude&quot;],</span>
-<span class="c1">///            &quot;EventsToDisable&quot;: []</span>
+<span class="c1">///        "DeviceData": {</span>
+<span class="c1">///            "DisableAll": true,</span>
+<span class="c1">///            "AttributesToDisable": ["location_latitude", "location_longitude"],</span>
+<span class="c1">///            "EventsToDisable": []</span>
 <span class="c1">///        },</span>
-<span class="c1">///        &quot;NetworkData&quot;: {</span>
-<span class="c1">///            &quot;DisableAll&quot;: true,</span>
-<span class="c1">///            &quot;AttributesToDisable&quot;: [&quot;jitter&quot;, &quot;latency&quot;],</span>
-<span class="c1">///            &quot;EventsToDisable&quot;: []</span>
+<span class="c1">///        "NetworkData": {</span>
+<span class="c1">///            "DisableAll": true,</span>
+<span class="c1">///            "AttributesToDisable": ["jitter", "latency"],</span>
+<span class="c1">///            "EventsToDisable": []</span>
 <span class="c1">///        }</span>
 <span class="c1">///    }</span>
 <span class="c1">///</span>
@@ -19875,11 +19875,11 @@
 <span class="c1">///</span>
 <span class="c1">/// - Parameters:</span>
 <span class="c1">///   - privacyConfig: - A dictionary containing the necessary key value pairs for parsing the privacy config. If the privacy config is</span>
-<span class="c1">///                     fetched via WS1 UEM SDK, then it is in the JSON format. Apps / SDK&#39;s are expected to fetch the value for key &quot;DEXData&quot;</span>
+<span class="c1">///                     fetched via WS1 UEM SDK, then it is in the JSON format. Apps / SDK's are expected to fetch the value for key "DEXData"</span>
 <span class="c1">///                     and convert it into a dictionary.</span>
-<span class="c1">///                   - If the property &quot;DEXData&quot; and its value does not exist, apps are still required to call this API with nil value</span>
+<span class="c1">///                   - If the property "DEXData" and its value does not exist, apps are still required to call this API with nil value</span>
 <span class="c1">///                     for the privacyConfig parameter.</span>
-<span class="c1">///   - type: Feature for which the privacy configuration needs to be applied. Currently only DEX is supported. Other telemetry type&#39;s are ignored.</span>
+<span class="c1">///   - type: Feature for which the privacy configuration needs to be applied. Currently only DEX is supported. Other telemetry type's are ignored.</span>
 <span class="p">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setPrivacyConfiguration:</span><span class="p">(</span><span class="n">nullable</span><span class="w"> </span><span class="bp">NSDictionary</span><span class="o">&lt;</span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="kt">id</span><span class="o">&gt;</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">privacyConfig</span><span class="w"> </span><span class="nf">forType:</span><span class="p">(</span><span class="n">WS1TelemetryType</span><span class="p">)</span><span class="nv">type</span><span class="p">;</span>
 </code></pre></div>
 <ul>
@@ -19934,8 +19934,8 @@ Users are now able to export data collected from the Telemetry Features they hav
 </ul>
 <h3 id="new-features_12">New Features<a class="headerlink" href="#new-features_12" title="Permanent link">&para;</a></h3>
 <p>The following APIs are now deprecated:</p>
-<div class="highlight"><pre><span></span><code><span class="w">   </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">setOptOutStatus</span><span class="o">:</span><span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="n">status</span><span class="w"> </span><span class="n">__deprecated_msg</span><span class="p">(</span><span class="s">&quot;Use setOptInStatusForType:type:status instead&quot;</span><span class="p">);</span>
-<span class="w">   </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="n">getOptOutStatus</span><span class="w"> </span><span class="n">__deprecated_msg</span><span class="p">(</span><span class="s">&quot;Use getOptInStatusForType:type instead&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="w">   </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">setOptOutStatus</span><span class="o">:</span><span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="n">status</span><span class="w"> </span><span class="n">__deprecated_msg</span><span class="p">(</span><span class="s">"Use setOptInStatusForType:type:status instead"</span><span class="p">);</span>
+<span class="w">   </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="n">getOptOutStatus</span><span class="w"> </span><span class="n">__deprecated_msg</span><span class="p">(</span><span class="s">"Use getOptInStatusForType:type instead"</span><span class="p">);</span>
 </code></pre></div>
 <p>Users are now able to individually opt in for Application or DEX telemetry data collection.</p>
 <div class="highlight"><pre><span></span><code><span class="w">   </span><span class="k">typedef</span><span class="w"> </span><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">,</span><span class="w"> </span><span class="n">WS1TelemetryType</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -20041,7 +20041,7 @@ Users are now able to export data collected from the Telemetry Features they hav
 <span class="c1">// Inject all entitlements that App supports that SDK requires.</span>
 <span class="n">config</span><span class="p">.</span><span class="n">entitlements</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[.</span><span class="n">wifi_info</span><span class="p">()]</span>
 
-<span class="n">WS1Intelligence</span><span class="p">.</span><span class="n">enable</span><span class="p">(</span><span class="n">withAppID</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;App ID&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p">:</span><span class="w"> </span><span class="n">config</span><span class="p">)</span>
+<span class="n">WS1Intelligence</span><span class="p">.</span><span class="n">enable</span><span class="p">(</span><span class="n">withAppID</span><span class="p">:</span><span class="w"> </span><span class="s">"App ID"</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p">:</span><span class="w"> </span><span class="n">config</span><span class="p">)</span>
 </code></pre></div>
 <ul>
 <li>A list of all entitlements / permissions that WS1IntelligenceSDK requires is listed below. If the entitlements / permissions are not given / available then those attributes are not sent to the Intel backend.</li>
@@ -20100,8 +20100,8 @@ Users are now able to export data collected from the Telemetry Features they hav
 <ul>
 <li>Sample Implementation</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="err">#</span><span class="kn">import</span><span class="w"> </span><span class="err">&quot;</span><span class="nn">WS1UEMAttributeKeys.h</span><span class="s">&quot;</span>
-<span class="s">#import &quot;</span><span class="n">WS1Intelligence</span><span class="p">.</span><span class="na">h</span><span class="s">&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="err">#</span><span class="kn">import</span><span class="w"> </span><span class="err">"</span><span class="nn">WS1UEMAttributeKeys.h</span><span class="s">"</span>
+<span class="s">#import "</span><span class="n">WS1Intelligence</span><span class="p">.</span><span class="na">h</span><span class="s">"</span>
 
 
 <span class="s">@interface AppDelegate () &lt;WS1UEMDataDelegate&gt;</span>
@@ -20398,7 +20398,7 @@ Users are now able to export data collected from the Telemetry Features they hav
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "header.autohide", "navigation.header", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../js/timeago.min.js"></script>
       

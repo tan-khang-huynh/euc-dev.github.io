@@ -21,13 +21,13 @@
       
       
       <link rel="icon" href="../../../../../../assets/logos/favicon-light.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
   <title>Omnissa Developer Portal</title>
 
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -18493,7 +18493,7 @@ void *channelHandle;
 VDPRPC_VariantInterface vi;
 VDPOverlay_GuestInterface ogi;
 /* other interfaces omitted */
-VDPService_ServerInit(&quot;example&quot; /* token */, &amp;qi, &amp;channelHandle); 
+VDPService_ServerInit("example" /* token */, &amp;qi, &amp;channelHandle); 
 qi.QueryInterface(&amp;GUID_VDPRPC_VariantInterface_V1, &amp;vi); 
 qi.QueryInterface(&amp;GUID_VDPOverlay_GuestInterface_V1, &amp;ogi);
 /* ... */
@@ -18566,8 +18566,8 @@ varIface.v1.VariantFromInt32(&amp;var, 32);
 ctxtIface.v1.AppendParam(contextHandle, &amp;var);
 
 // The same variant can be used for multiple parameters 
-varIface.v1.VariantFromString(&amp;var, &quot;sample string&quot;); 
-ctxtIface.v1.AppendNamedParam(contextHandle, &quot;sample param&quot;, &amp;var);
+varIface.v1.VariantFromString(&amp;var, "sample string"); 
+ctxtIface.v1.AppendNamedParam(contextHandle, "sample param", &amp;var);
 
 // Call VariantClear() after all parameters are added to the context
 // Failure to call VariantClear() can lead to memory leaks 
@@ -18588,8 +18588,8 @@ varIface.v1.VariantFromInt32(&amp;var, 32);
 ctxtIface.v1.AppendParam(contextHandle, &amp;var); 
 
 // The same variant can be used for multiple parameters 
-varIface.v1.VariantFromString(&amp;var, &quot;sample string&quot;); 
-ctxtIface.v1.AppendNamedParam(contextHandle, &quot;sample param&quot;, &amp;var); 
+varIface.v1.VariantFromString(&amp;var, "sample string"); 
+ctxtIface.v1.AppendNamedParam(contextHandle, "sample param", &amp;var); 
 </code></pre></div>
 <h3 id="oninvoke">OnInvoke<a class="headerlink" href="#oninvoke" title="Permanent link">&para;</a></h3>
 <p>On a successful <code>v1.Invoke</code> call, the peer object receives an <code>v1.OnInvoke</code> callback. In this callback you receive a channel context. The context contains all of the information for the call. To respond, add the appropriate return code and return values to the channel context, which is returned to the caller when the <code>v1.OnInvoke</code> call returns.</p>
@@ -18929,7 +18929,7 @@ ctxtIface.v1.AppendNamedParam(contextHandle, &quot;sample param&quot;, &amp;var)
       <script id="__config" type="application/json">{"annotate": null, "base": "../../../../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "header.autohide", "navigation.header", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../../../../js/timeago.min.js"></script>
       

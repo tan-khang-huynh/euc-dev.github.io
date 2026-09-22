@@ -25,13 +25,13 @@
       
       
       <link rel="icon" href="../../assets/logos/favicon-light.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
   <title>Omnissa Developer Portal</title>
 
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -17746,25 +17746,25 @@
 </blockquote>
 <p>To request an access token via shell:</p>
 <p><em>Request:</em></p>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-k<span class="w"> </span>-s<span class="w"> </span>-i<span class="w"> </span>-X<span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s1">&#39;https://localhost:9443/rest/v1/jwt/login&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;accept: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
-<span class="s1">  &quot;username&quot;: &quot;admin&quot;,</span>
-<span class="s1">  &quot;password&quot;: &quot;password&quot;,</span>
-<span class="s1">  &quot;refreshTokenExpiryInHours&quot;: 3</span>
-<span class="s1">}&#39;</span>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-k<span class="w"> </span>-s<span class="w"> </span>-i<span class="w"> </span>-X<span class="w"> </span><span class="s1">'POST'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s1">'https://localhost:9443/rest/v1/jwt/login'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'accept: application/json'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'Content-Type: application/json'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">'{</span>
+<span class="s1">  "username": "admin",</span>
+<span class="s1">  "password": "password",</span>
+<span class="s1">  "refreshTokenExpiryInHours": 3</span>
+<span class="s1">}'</span>
 </code></pre></div>
 <p><em>Response:</em></p>
 <div class="highlight"><pre><span></span><code><span class="err">HTTP/</span><span class="mf">1.1</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="err">OK</span>
 <span class="err">…</span><span class="w"> </span><span class="err">(o</span><span class="kc">t</span><span class="err">her</span><span class="w"> </span><span class="err">respo</span><span class="kc">nse</span><span class="w"> </span><span class="err">headers)</span>
 
 <span class="p">{</span>
-<span class="nt">&quot;access_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;access-token&gt;&quot;</span><span class="p">,</span>
-<span class="nt">&quot;accessTokenExpiryTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;access-token-expiry-timestamp&gt;&quot;</span><span class="p">,</span>
-<span class="nt">&quot;refreshToken&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;refresh-token&gt;&quot;</span><span class="p">,</span>
-<span class="nt">&quot;refreshTokenExpiryTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;refresh-token-expiry-timestamp&gt;&quot;</span>
+<span class="nt">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;access-token&gt;"</span><span class="p">,</span>
+<span class="nt">"accessTokenExpiryTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;access-token-expiry-timestamp&gt;"</span><span class="p">,</span>
+<span class="nt">"refreshToken"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;refresh-token&gt;"</span><span class="p">,</span>
+<span class="nt">"refreshTokenExpiryTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;refresh-token-expiry-timestamp&gt;"</span>
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="2-refresh-token">2. Refresh Token<a class="headerlink" href="#2-refresh-token" title="Permanent link">&para;</a></h2>
@@ -17811,24 +17811,24 @@
 </table>
 <p>To refresh the access token via shell:</p>
 <p><em>Request:</em></p>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-k<span class="w"> </span>-s<span class="w"> </span>-i<span class="w"> </span>-X<span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s1">&#39;https://localhost:9443/rest/v1/jwt/refreshToken&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;accept: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
-<span class="s1">  &quot;refreshToken&quot;: &quot;&lt;refresh-token&gt;&quot;,</span>
-<span class="s1">  &quot;refreshTokenExpiryInHours&quot;: 4</span>
-<span class="s1">}&#39;</span>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-k<span class="w"> </span>-s<span class="w"> </span>-i<span class="w"> </span>-X<span class="w"> </span><span class="s1">'POST'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s1">'https://localhost:9443/rest/v1/jwt/refreshToken'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'accept: application/json'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'Content-Type: application/json'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">'{</span>
+<span class="s1">  "refreshToken": "&lt;refresh-token&gt;",</span>
+<span class="s1">  "refreshTokenExpiryInHours": 4</span>
+<span class="s1">}'</span>
 </code></pre></div>
 <p><em>Response:</em></p>
 <div class="highlight"><pre><span></span><code><span class="err">HTTP/</span><span class="mf">1.1</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="err">OK</span>
 <span class="err">…</span><span class="w"> </span><span class="err">(o</span><span class="kc">t</span><span class="err">her</span><span class="w"> </span><span class="err">respo</span><span class="kc">nse</span><span class="w"> </span><span class="err">headers)</span>
 
 <span class="p">{</span>
-<span class="nt">&quot;access_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;access-token&gt;&quot;</span><span class="p">,</span>
-<span class="nt">&quot;accessTokenExpiryTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;access-token-expiry-timestamp&gt;&quot;</span><span class="p">,</span>
-<span class="nt">&quot;refreshToken&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;refresh-token&gt;&quot;</span><span class="p">,</span>
-<span class="nt">&quot;refreshTokenExpiryTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;refresh-token-expiry-timestamp&gt;&quot;</span>
+<span class="nt">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;access-token&gt;"</span><span class="p">,</span>
+<span class="nt">"accessTokenExpiryTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;access-token-expiry-timestamp&gt;"</span><span class="p">,</span>
+<span class="nt">"refreshToken"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;refresh-token&gt;"</span><span class="p">,</span>
+<span class="nt">"refreshTokenExpiryTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;refresh-token-expiry-timestamp&gt;"</span>
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="3-logoutinvalidate-token">3. Logout/Invalidate token<a class="headerlink" href="#3-logoutinvalidate-token" title="Permanent link">&para;</a></h2>
@@ -17865,10 +17865,10 @@
 </table>
 <p>To refresh the access token via shell:</p>
 <p><em>Request:</em></p>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-k<span class="w"> </span>-s<span class="w"> </span>-i<span class="w"> </span>-X<span class="w"> </span><span class="s1">&#39;DELETE&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s1">&#39;https://localhost:9443/rest/v1/jwt/invalidate&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;accept: */*&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;Authorization: Bearer &lt;access-token&gt;&#39;</span>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-k<span class="w"> </span>-s<span class="w"> </span>-i<span class="w"> </span>-X<span class="w"> </span><span class="s1">'DELETE'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s1">'https://localhost:9443/rest/v1/jwt/invalidate'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'accept: */*'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'Authorization: Bearer &lt;access-token&gt;'</span>
 </code></pre></div>
 <p><em>Response:</em></p>
 <div class="highlight"><pre><span></span><code><span class="err">HTTP/</span><span class="mf">1.1</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="err">OK</span>
@@ -18126,7 +18126,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "header.autohide", "navigation.header", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../js/timeago.min.js"></script>
       

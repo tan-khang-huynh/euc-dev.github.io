@@ -25,13 +25,13 @@
       
       
       <link rel="icon" href="../../assets/logos/favicon-light.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
   <title>Omnissa Developer Portal</title>
 
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -17755,17 +17755,17 @@ To generate Base64 encoded values, you can use the following online resource <a 
 </blockquote>
 <p>To request an access token via shell:</p>
 <div class="highlight"><pre><span></span><code>curl<span class="w"> </span>–X<span class="w"> </span>POST<span class="w"> </span>&lt;your<span class="w"> </span>tenant<span class="w"> </span>name<span class="w"> </span>here&gt;<span class="w"> </span><span class="se">\</span>
--H<span class="w"> </span><span class="s1">&#39;authorization: Basic Y3VybDpmRmpzOHRHaWxvUUQ1emU0cEw0MkVWNnMwbXVmR3JPRw==&#39;</span><span class="w"> </span><span class="se">\</span>
--H<span class="w"> </span><span class="s1">&#39;content-type:application/x-www-form-urlencoded&#39;</span><span class="w"> </span><span class="se">\</span>
--d<span class="w"> </span><span class="s1">&#39;grant_type=client_credentials&#39;</span>
+-H<span class="w"> </span><span class="s1">'authorization: Basic Y3VybDpmRmpzOHRHaWxvUUQ1emU0cEw0MkVWNnMwbXVmR3JPRw=='</span><span class="w"> </span><span class="se">\</span>
+-H<span class="w"> </span><span class="s1">'content-type:application/x-www-form-urlencoded'</span><span class="w"> </span><span class="se">\</span>
+-d<span class="w"> </span><span class="s1">'grant_type=client_credentials'</span>
 </code></pre></div>
 <p>Omnissa Access will return the following as a response:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;access_token&quot;</span><span class="p">:</span><span class="s2">&quot;&lt;your token here&gt;&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;token_type&quot;</span><span class="p">:</span><span class="s2">&quot;Bearer&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;expires_in&quot;</span><span class="p">:</span><span class="mi">10799</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;refresh_token&quot;</span><span class="p">:</span><span class="s2">&quot;&lt;your token here&gt;&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span><span class="s2">&quot;admin&quot;</span>
+<span class="w">    </span><span class="nt">"access_token"</span><span class="p">:</span><span class="s2">"&lt;your token here&gt;"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"token_type"</span><span class="p">:</span><span class="s2">"Bearer"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"expires_in"</span><span class="p">:</span><span class="mi">10799</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"refresh_token"</span><span class="p">:</span><span class="s2">"&lt;your token here&gt;"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"scope"</span><span class="p">:</span><span class="s2">"admin"</span>
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="3-refresh-access-token">3. Refresh Access Token<a class="headerlink" href="#3-refresh-access-token" title="Permanent link">&para;</a></h2>
@@ -17817,17 +17817,17 @@ To generate Base64 encoded values, you can use the following online resource <a 
 </ul>
 <p>To refresh the access token via shell:</p>
 <div class="highlight"><pre><span></span><code>curl<span class="w"> </span>–X<span class="w"> </span>POST<span class="w"> </span>&lt;your<span class="w"> </span>tenant<span class="w"> </span>name<span class="w"> </span>here&gt;<span class="w"> </span><span class="se">\</span>
--H<span class="w"> </span><span class="s1">&#39;authorization: Basic &lt;your token here&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
--H<span class="w"> </span><span class="s1">&#39;content-type:application/x-www-form-urlencoded&#39;</span><span class="w"> </span><span class="se">\</span>
--d<span class="w"> </span><span class="s1">&#39;grant_type=client_credentials&#39;</span><span class="w"> </span><span class="se">\</span>
--d<span class="w"> </span><span class="s1">&#39;refresh_token=&lt;your token here&gt;&#39;</span>
+-H<span class="w"> </span><span class="s1">'authorization: Basic &lt;your token here&gt;'</span><span class="w"> </span><span class="se">\</span>
+-H<span class="w"> </span><span class="s1">'content-type:application/x-www-form-urlencoded'</span><span class="w"> </span><span class="se">\</span>
+-d<span class="w"> </span><span class="s1">'grant_type=client_credentials'</span><span class="w"> </span><span class="se">\</span>
+-d<span class="w"> </span><span class="s1">'refresh_token=&lt;your token here&gt;'</span>
 </code></pre></div>
 <p>Omnissa Access will return the following in response:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;access_token&quot;</span><span class="p">:</span><span class="s2">&quot;&lt;your token here&gt;&quot;</span><span class="p">,</span>
-<span class="nt">&quot;token_type&quot;</span><span class="p">:</span><span class="s2">&quot;Bearer&quot;</span><span class="p">,</span>
-<span class="nt">&quot;expires_in&quot;</span><span class="p">:</span><span class="mi">10799</span><span class="p">,</span>
-<span class="nt">&quot;refresh_token&quot;</span><span class="p">:</span><span class="s2">&quot;&lt;your token here&gt;&quot;</span><span class="p">,</span>
-<span class="nt">&quot;scope&quot;</span><span class="p">:</span><span class="s2">&quot;admin&quot;</span><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">"access_token"</span><span class="p">:</span><span class="s2">"&lt;your token here&gt;"</span><span class="p">,</span>
+<span class="nt">"token_type"</span><span class="p">:</span><span class="s2">"Bearer"</span><span class="p">,</span>
+<span class="nt">"expires_in"</span><span class="p">:</span><span class="mi">10799</span><span class="p">,</span>
+<span class="nt">"refresh_token"</span><span class="p">:</span><span class="s2">"&lt;your token here&gt;"</span><span class="p">,</span>
+<span class="nt">"scope"</span><span class="p">:</span><span class="s2">"admin"</span><span class="p">}</span>
 </code></pre></div>
 
 
@@ -18081,7 +18081,7 @@ To generate Base64 encoded values, you can use the following online resource <a 
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "header.autohide", "navigation.header", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../js/timeago.min.js"></script>
       

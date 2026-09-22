@@ -25,13 +25,13 @@
       
       
       <link rel="icon" href="../../../assets/logos/favicon-light.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
   <title>Omnissa Developer Portal</title>
 
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -17835,13 +17835,13 @@ The Crittercism framework is no longer supported. Use the WS1IntelligenceSDK fra
 <h3 id="2-enable-omnissa-intelligence-sdk">2. Enable Omnissa Intelligence SDK.<a class="headerlink" href="#2-enable-omnissa-intelligence-sdk" title="Permanent link">&para;</a></h3>
 <p>Call <code>enableWithAppID</code> in your AppDelegate’s <code>application:didFinishLaunchingWithOptions:</code> method.</p>
 <div class="highlight"><pre><span></span><code><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">application</span><span class="o">:</span><span class="p">(</span><span class="n">UIApplication</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">application</span><span class="w"> </span><span class="n">didFinishLaunchingWithOptions</span><span class="o">:</span><span class="p">(</span><span class="n">NSDictionary</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">launchOptions</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="p">[</span><span class="n">WS1Intelligence</span><span class="w"> </span><span class="n">enableWithAppID</span><span class="o">:</span><span class="err">@</span><span class="s">&quot;YOUR APP ID GOES HERE&quot;</span><span class="p">];</span>
+<span class="w">  </span><span class="p">[</span><span class="n">WS1Intelligence</span><span class="w"> </span><span class="n">enableWithAppID</span><span class="o">:</span><span class="err">@</span><span class="s">"YOUR APP ID GOES HERE"</span><span class="p">];</span>
 <span class="w">  </span><span class="c1">// other code for your app</span>
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">YES</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nf">application</span><span class="p">(</span><span class="kc">_</span><span class="w"> </span><span class="n">application</span><span class="p">:</span><span class="w"> </span><span class="bp">UIApplication</span><span class="p">,</span><span class="w"> </span><span class="n">didFinishLaunchingWithOptions</span><span class="w"> </span><span class="n">launchOptions</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="n">UIApplicationLaunchOptionsKey</span><span class="p">:</span><span class="w"> </span><span class="nb">Any</span><span class="p">]?)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="nb">Bool</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">WS1Intelligence</span><span class="p">.</span><span class="n">enable</span><span class="p">(</span><span class="n">withAppID</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;YOUR APP ID GOES HERE&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="n">WS1Intelligence</span><span class="p">.</span><span class="n">enable</span><span class="p">(</span><span class="n">withAppID</span><span class="p">:</span><span class="w"> </span><span class="s">"YOUR APP ID GOES HERE"</span><span class="p">)</span>
 <span class="w">  </span><span class="c1">// other code for your app</span>
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span>
 <span class="p">}</span>
@@ -17853,12 +17853,12 @@ The Crittercism framework is no longer supported. Use the WS1IntelligenceSDK fra
 <h3 id="crashlytics">Crashlytics:<a class="headerlink" href="#crashlytics" title="Permanent link">&para;</a></h3>
 <p>Omnissa Intelligence SDK should be initialized before Crashlytics</p>
 <p>Objective-C</p>
-<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="n">WS1Intelligence</span><span class="w"> </span><span class="n">enableWithAppID</span><span class="o">:</span><span class="s">@&quot;YOUR APP ID GOES HERE&quot;</span><span class="p">];</span>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="n">WS1Intelligence</span><span class="w"> </span><span class="n">enableWithAppID</span><span class="o">:</span><span class="s">@"YOUR APP ID GOES HERE"</span><span class="p">];</span>
 
 <span class="c1">// Initialize Crashlytics</span>
 </code></pre></div>
 <p>Swift</p>
-<div class="highlight"><pre><span></span><code><span class="n">WS1Intelligence</span><span class="p">.</span><span class="n">enable</span><span class="p">(</span><span class="n">withAppID</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;YOUR APP ID GOES HERE&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">WS1Intelligence</span><span class="p">.</span><span class="n">enable</span><span class="p">(</span><span class="n">withAppID</span><span class="p">:</span><span class="w"> </span><span class="s">"YOUR APP ID GOES HERE"</span><span class="p">)</span>
 
 <span class="c1">// Initialize Crashlytics</span>
 </code></pre></div>
@@ -17868,22 +17868,22 @@ The Crittercism framework is no longer supported. Use the WS1IntelligenceSDK fra
 
 <span class="c1">// Initialize AppDynamics</span>
 
-<span class="p">[</span><span class="n">WS1Intelligence</span><span class="w"> </span><span class="n">enableWithAppID</span><span class="o">:</span><span class="err">@</span><span class="s">&quot;YOUR APP ID GOES HERE&quot;</span><span class="p">];</span>
+<span class="p">[</span><span class="n">WS1Intelligence</span><span class="w"> </span><span class="n">enableWithAppID</span><span class="o">:</span><span class="err">@</span><span class="s">"YOUR APP ID GOES HERE"</span><span class="p">];</span>
 </code></pre></div>
 <p>Swift</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Initialize Crashlytics</span>
 
-<span class="n">WS1Intelligence</span><span class="p">.</span><span class="n">enable</span><span class="p">(</span><span class="n">withAppID</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;YOUR APP ID GOES HERE&quot;</span><span class="p">)</span>
+<span class="n">WS1Intelligence</span><span class="p">.</span><span class="n">enable</span><span class="p">(</span><span class="n">withAppID</span><span class="p">:</span><span class="w"> </span><span class="s">"YOUR APP ID GOES HERE"</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="new-relic">New Relic:<a class="headerlink" href="#new-relic" title="Permanent link">&para;</a></h3>
 <p>Omnissa Intelligence SDK should be initialized before New Relic</p>
 <p>Objective-C</p>
-<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="n">WS1Intelligence</span><span class="w"> </span><span class="n">enableWithAppID</span><span class="o">:</span><span class="err">@</span><span class="s">&quot;YOUR APP ID GOES HERE&quot;</span><span class="p">];</span>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="n">WS1Intelligence</span><span class="w"> </span><span class="n">enableWithAppID</span><span class="o">:</span><span class="err">@</span><span class="s">"YOUR APP ID GOES HERE"</span><span class="p">];</span>
 
 <span class="c1">// Initialize New Relic</span>
 </code></pre></div>
 <p>Swift</p>
-<div class="highlight"><pre><span></span><code><span class="n">WS1Intelligence</span><span class="p">.</span><span class="n">enable</span><span class="p">(</span><span class="n">withAppID</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;YOUR APP ID GOES HERE&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">WS1Intelligence</span><span class="p">.</span><span class="n">enable</span><span class="p">(</span><span class="n">withAppID</span><span class="p">:</span><span class="w"> </span><span class="s">"YOUR APP ID GOES HERE"</span><span class="p">)</span>
 
 <span class="c1">// Initialize New Relic</span>
 </code></pre></div>
@@ -18139,7 +18139,7 @@ The Crittercism framework is no longer supported. Use the WS1IntelligenceSDK fra
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "header.autohide", "navigation.header", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../js/timeago.min.js"></script>
       

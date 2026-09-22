@@ -25,13 +25,13 @@
       
       
       <link rel="icon" href="../assets/logos/favicon-light.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
   <title>Omnissa Developer Portal</title>
 
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -17792,17 +17792,17 @@
 
 <span class="err">#</span><span class="w"> </span><span class="nx">Define</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">OAuth</span><span class="w"> </span><span class="nx">endpoint</span><span class="p">,</span><span class="w"> </span><span class="nx">client</span><span class="w"> </span><span class="nx">ID</span><span class="p">,</span><span class="w"> </span><span class="nx">and</span><span class="w"> </span><span class="nx">client</span><span class="w"> </span><span class="nx">secret</span>
 
-<span class="nx">$tokenUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&lt;provide Token URL&gt;&quot;</span>
+<span class="nx">$tokenUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&lt;provide Token URL&gt;"</span>
 
-<span class="nx">$clientId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&lt;provide Oauth Client ID&gt;&quot;</span>
+<span class="nx">$clientId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&lt;provide Oauth Client ID&gt;"</span>
 
-<span class="nx">$clientSecret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&lt;provide Oauth Client Secret&gt;&quot;</span>
+<span class="nx">$clientSecret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&lt;provide Oauth Client Secret&gt;"</span>
 
-<span class="nx">$api_server_url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&lt;provide API Server hostname (asXXXX)&gt;&quot;</span>
+<span class="nx">$api_server_url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&lt;provide API Server hostname (asXXXX)&gt;"</span>
 
-<span class="nx">$aw_tenant_code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&lt;provide API key&gt;&quot;</span>
+<span class="nx">$aw_tenant_code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&lt;provide API key&gt;"</span>
 
-<span class="nx">$LocationGroupID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&lt;LG_ID&gt;&quot;</span>
+<span class="nx">$LocationGroupID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&lt;LG_ID&gt;"</span>
 
 <span class="nx">$numberOfDays</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span>
 
@@ -17818,7 +17818,7 @@
 
 <span class="nx">$body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">@</span><span class="p">{</span>
 
-<span class="w">    </span><span class="nx">grant_type</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;client_credentials&quot;</span>
+<span class="w">    </span><span class="nx">grant_type</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">"client_credentials"</span>
 
 <span class="w">    </span><span class="nx">client_id</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="nx">$clientId</span>
 
@@ -17830,7 +17830,7 @@
 
 <span class="err">#</span><span class="w"> </span><span class="nx">Make</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">OAuth</span><span class="w"> </span><span class="nx">token</span><span class="w"> </span><span class="nx">request</span>
 
-<span class="nx">$oauth_token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Invoke</span><span class="o">-</span><span class="nx">RestMethod</span><span class="w"> </span><span class="o">-</span><span class="nx">Uri</span><span class="w"> </span><span class="nx">$tokenUrl</span><span class="w"> </span><span class="o">-</span><span class="nx">Method</span><span class="w"> </span><span class="nx">Post</span><span class="w"> </span><span class="o">-</span><span class="nx">ContentType</span><span class="w"> </span><span class="s2">&quot;application/x-www-form-urlencoded&quot;</span><span class="w"> </span><span class="o">-</span><span class="nx">Body</span><span class="w"> </span><span class="nx">$body</span>
+<span class="nx">$oauth_token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Invoke</span><span class="o">-</span><span class="nx">RestMethod</span><span class="w"> </span><span class="o">-</span><span class="nx">Uri</span><span class="w"> </span><span class="nx">$tokenUrl</span><span class="w"> </span><span class="o">-</span><span class="nx">Method</span><span class="w"> </span><span class="nx">Post</span><span class="w"> </span><span class="o">-</span><span class="nx">ContentType</span><span class="w"> </span><span class="s2">"application/x-www-form-urlencoded"</span><span class="w"> </span><span class="o">-</span><span class="nx">Body</span><span class="w"> </span><span class="nx">$body</span>
 
 
 
@@ -17840,15 +17840,15 @@
 
 <span class="err">#################################################################################</span>
 
-<span class="nx">$headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">New</span><span class="o">-</span><span class="nb">Object</span><span class="w"> </span><span class="s2">&quot;System.Collections.Generic.Dictionary[[String],[String]]&quot;</span>
+<span class="nx">$headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">New</span><span class="o">-</span><span class="nb">Object</span><span class="w"> </span><span class="s2">"System.Collections.Generic.Dictionary[[String],[String]]"</span>
 
-<span class="nx">$headers</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s2">&quot;Accept&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;application/json;version=1&quot;</span><span class="p">)</span>
+<span class="nx">$headers</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s2">"Accept"</span><span class="p">,</span><span class="w"> </span><span class="s2">"application/json;version=1"</span><span class="p">)</span>
 
-<span class="nx">$headers</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s2">&quot;Authorization&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Bearer $($oauth_token.access_token)&quot;</span><span class="p">)</span>
+<span class="nx">$headers</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s2">"Authorization"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Bearer $($oauth_token.access_token)"</span><span class="p">)</span>
 
 
 
-<span class="nx">$availableTags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Invoke</span><span class="o">-</span><span class="nx">RestMethod</span><span class="w"> </span><span class="s2">&quot;https:// $api_server_url.awmdm.com/api/system/groups/$LocationGroupID/tags&quot;</span><span class="w"> </span><span class="o">-</span><span class="nx">Method</span><span class="w"> </span><span class="s1">&#39;GET&#39;</span><span class="w"> </span><span class="o">-</span><span class="nx">Headers</span><span class="w"> </span><span class="nx">$headers</span>
+<span class="nx">$availableTags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Invoke</span><span class="o">-</span><span class="nx">RestMethod</span><span class="w"> </span><span class="s2">"https:// $api_server_url.awmdm.com/api/system/groups/$LocationGroupID/tags"</span><span class="w"> </span><span class="o">-</span><span class="nx">Method</span><span class="w"> </span><span class="s1">'GET'</span><span class="w"> </span><span class="o">-</span><span class="nx">Headers</span><span class="w"> </span><span class="nx">$headers</span>
 
 
 
@@ -17866,7 +17866,7 @@
 
 <span class="err">#</span><span class="w"> </span><span class="nx">Add</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">special</span><span class="w"> </span><span class="nx">tag</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">empty</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">invalid</span><span class="w"> </span><span class="nx">asset</span><span class="w"> </span><span class="nx">numbers</span>
 
-<span class="nx">$emptyOrInvalidTagName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;emptyorinvalidassetnumber&quot;</span>
+<span class="nx">$emptyOrInvalidTagName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"emptyorinvalidassetnumber"</span>
 
 <span class="nx">$emptyOrInvalidTagID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$tagDict</span><span class="p">[</span><span class="nx">$emptyOrInvalidTagName</span><span class="p">].</span><span class="nx">Id</span>
 
@@ -17878,11 +17878,11 @@
 
 <span class="err">#################################################################################</span>
 
-<span class="nx">$startDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">Get</span><span class="o">-</span><span class="nb">Date</span><span class="p">).</span><span class="nx">AddDays</span><span class="p">(</span><span class="o">-</span><span class="nx">$numberOfDays</span><span class="p">).</span><span class="nx">ToString</span><span class="p">(</span><span class="s2">&quot;yyyy/MM/dd&quot;</span><span class="p">)</span>
+<span class="nx">$startDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">Get</span><span class="o">-</span><span class="nb">Date</span><span class="p">).</span><span class="nx">AddDays</span><span class="p">(</span><span class="o">-</span><span class="nx">$numberOfDays</span><span class="p">).</span><span class="nx">ToString</span><span class="p">(</span><span class="s2">"yyyy/MM/dd"</span><span class="p">)</span>
 
 
 
-<span class="nx">$recentlyEnrolled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Invoke</span><span class="o">-</span><span class="nx">RestMethod</span><span class="w"> </span><span class="s2">&quot;https:// $api_server_url.awmdm.com/api/system/users/enrolleddevices/search?enrolledsince=$startDate&quot;</span><span class="w"> </span><span class="o">-</span><span class="nx">Method</span><span class="w"> </span><span class="s1">&#39;GET&#39;</span><span class="w"> </span><span class="o">-</span><span class="nx">Headers</span><span class="w"> </span><span class="nx">$headers</span>
+<span class="nx">$recentlyEnrolled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Invoke</span><span class="o">-</span><span class="nx">RestMethod</span><span class="w"> </span><span class="s2">"https:// $api_server_url.awmdm.com/api/system/users/enrolleddevices/search?enrolledsince=$startDate"</span><span class="w"> </span><span class="o">-</span><span class="nx">Method</span><span class="w"> </span><span class="s1">'GET'</span><span class="w"> </span><span class="o">-</span><span class="nx">Headers</span><span class="w"> </span><span class="nx">$headers</span>
 
 
 
@@ -17938,7 +17938,7 @@
 
 
 
-<span class="w">    </span><span class="nx">$response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Invoke</span><span class="o">-</span><span class="nx">RestMethod</span><span class="w"> </span><span class="s2">&quot;https:// $api_server_url.awmdm.com/api/mdm/tags/$tagID/adddevices&quot;</span><span class="w"> </span><span class="o">-</span><span class="nx">Method</span><span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="w"> </span><span class="o">-</span><span class="nx">Headers</span><span class="w"> </span><span class="nx">$headers</span><span class="w"> </span><span class="o">-</span><span class="nx">Body</span><span class="w"> </span><span class="nx">$body</span>
+<span class="w">    </span><span class="nx">$response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Invoke</span><span class="o">-</span><span class="nx">RestMethod</span><span class="w"> </span><span class="s2">"https:// $api_server_url.awmdm.com/api/mdm/tags/$tagID/adddevices"</span><span class="w"> </span><span class="o">-</span><span class="nx">Method</span><span class="w"> </span><span class="s1">'POST'</span><span class="w"> </span><span class="o">-</span><span class="nx">Headers</span><span class="w"> </span><span class="nx">$headers</span><span class="w"> </span><span class="o">-</span><span class="nx">Body</span><span class="w"> </span><span class="nx">$body</span>
 
 
 
@@ -18200,7 +18200,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "header.autohide", "navigation.header", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../js/timeago.min.js"></script>
       

@@ -25,13 +25,13 @@
       
       
       <link rel="icon" href="../../assets/logos/favicon-light.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
   <title>Omnissa Developer Portal</title>
 
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -17580,16 +17580,16 @@
 <p><strong>Example of Using the Generated Access Token for REST API Calls</strong></p>
 <p>To utilize the monitoring API, users must include the access_token as a Bearer token in the Authorization Header. Below is a cURL snippet illustrating the procedure for calling the monitor API:</p>
 <p><em>Request:</em></p>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-s<span class="w"> </span>-i<span class="w"> </span>-k<span class="w"> </span>-X<span class="w"> </span><span class="s1">&#39;GET&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s1">&#39;https://localhost:9443/rest/v1/monitor/stats&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;accept: application/xml&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;Authorization: Bearer &lt;access-token&gt;&#39;</span>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-s<span class="w"> </span>-i<span class="w"> </span>-k<span class="w"> </span>-X<span class="w"> </span><span class="s1">'GET'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s1">'https://localhost:9443/rest/v1/monitor/stats'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'accept: application/xml'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'Authorization: Bearer &lt;access-token&gt;'</span>
 </code></pre></div>
 <p><em>Response:</em></p>
 <div class="highlight"><pre><span></span><code>HTTP/1.1<span class="w"> </span>200<span class="w"> </span>OK
 …<span class="w"> </span>(other<span class="w"> </span>response<span class="w"> </span>headers)
 
-<span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="nt">&lt;accessPointStatusAndStats&gt;</span>
 <span class="w">   </span><span class="nt">&lt;sessionCount&gt;</span>19<span class="nt">&lt;/sessionCount&gt;</span>
 <span class="w">   </span><span class="nt">&lt;authenticatedSessionCount&gt;</span>0<span class="nt">&lt;/authenticatedSessionCount&gt;</span>
@@ -17601,7 +17601,7 @@
 <span class="w">   </span><span class="nt">&lt;overAllStatus&gt;</span>
 <span class="w">      </span><span class="nt">&lt;status&gt;</span>RUNNING<span class="nt">&lt;/status&gt;</span>
 <span class="w">   </span><span class="nt">&lt;/overAllStatus&gt;</span>
-<span class="w">   </span><span class="nt">&lt;authentication</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;eas&quot;</span><span class="nt">&gt;</span>
+<span class="w">   </span><span class="nt">&lt;authentication</span><span class="w"> </span><span class="na">name=</span><span class="s">"eas"</span><span class="nt">&gt;</span>
 <span class="w">      </span><span class="nt">&lt;status&gt;</span>
 <span class="w">         </span><span class="nt">&lt;reason&gt;</span>Reachable<span class="nt">&lt;/reason&gt;</span>
 <span class="w">         </span><span class="nt">&lt;status&gt;</span>RUNNING<span class="nt">&lt;/status&gt;</span>
@@ -17609,7 +17609,7 @@
 <span class="w">      </span><span class="nt">&lt;successLogins&gt;</span>3<span class="nt">&lt;/successLogins&gt;</span>
 <span class="w">      </span><span class="nt">&lt;failedLogins&gt;</span>2<span class="nt">&lt;/failedLogins&gt;</span>
 <span class="w">   </span><span class="nt">&lt;/authentication&gt;</span>
-<span class="w">   </span><span class="nt">&lt;authentication</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;cas&quot;</span><span class="nt">&gt;</span>
+<span class="w">   </span><span class="nt">&lt;authentication</span><span class="w"> </span><span class="na">name=</span><span class="s">"cas"</span><span class="nt">&gt;</span>
 <span class="w">      </span><span class="nt">&lt;status&gt;</span>
 <span class="w">         </span><span class="nt">&lt;reason&gt;</span>Reachable<span class="nt">&lt;/reason&gt;</span>
 <span class="w">         </span><span class="nt">&lt;status&gt;</span>RUNNING<span class="nt">&lt;/status&gt;</span>
@@ -17635,7 +17635,7 @@
 <span class="w">         </span><span class="nt">&lt;status&gt;</span>RUNNING<span class="nt">&lt;/status&gt;</span>
 <span class="w">      </span><span class="nt">&lt;/edgeServiceStatus&gt;</span>
 <span class="w">      </span><span class="nt">&lt;xmlapiUnrecognizedRequestsCount&gt;</span>0<span class="nt">&lt;/xmlapiUnrecognizedRequestsCount&gt;</span>
-<span class="w">      </span><span class="nt">&lt;protocol</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;pcoip&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;protocol</span><span class="w"> </span><span class="na">name=</span><span class="s">"pcoip"</span><span class="nt">&gt;</span>
 <span class="w">         </span><span class="nt">&lt;status&gt;</span>
 <span class="w">            </span><span class="nt">&lt;status&gt;</span>DISABLED<span class="nt">&lt;/status&gt;</span>
 <span class="w">         </span><span class="nt">&lt;/status&gt;</span>
@@ -17643,7 +17643,7 @@
 <span class="w">         </span><span class="nt">&lt;maxSessions&gt;</span>0<span class="nt">&lt;/maxSessions&gt;</span>
 <span class="w">         </span><span class="nt">&lt;unrecognizedRequestsCount&gt;</span>0<span class="nt">&lt;/unrecognizedRequestsCount&gt;</span>
 <span class="w">      </span><span class="nt">&lt;/protocol&gt;</span>
-<span class="w">      </span><span class="nt">&lt;protocol</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Tunnel,RDP&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;protocol</span><span class="w"> </span><span class="na">name=</span><span class="s">"Tunnel,RDP"</span><span class="nt">&gt;</span>
 <span class="w">         </span><span class="nt">&lt;status&gt;</span>
 <span class="w">            </span><span class="nt">&lt;reason&gt;</span>Reachable<span class="nt">&lt;/reason&gt;</span>
 <span class="w">            </span><span class="nt">&lt;status&gt;</span>RUNNING<span class="nt">&lt;/status&gt;</span>
@@ -17652,7 +17652,7 @@
 <span class="w">         </span><span class="nt">&lt;maxSessions&gt;</span>0<span class="nt">&lt;/maxSessions&gt;</span>
 <span class="w">         </span><span class="nt">&lt;unrecognizedRequestsCount&gt;</span>0<span class="nt">&lt;/unrecognizedRequestsCount&gt;</span>
 <span class="w">      </span><span class="nt">&lt;/protocol&gt;</span>
-<span class="w">      </span><span class="nt">&lt;protocol</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;blast&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;protocol</span><span class="w"> </span><span class="na">name=</span><span class="s">"blast"</span><span class="nt">&gt;</span>
 <span class="w">         </span><span class="nt">&lt;status&gt;</span>
 <span class="w">            </span><span class="nt">&lt;reason&gt;</span>Reachable<span class="nt">&lt;/reason&gt;</span>
 <span class="w">            </span><span class="nt">&lt;status&gt;</span>RUNNING<span class="nt">&lt;/status&gt;</span>
@@ -17661,7 +17661,7 @@
 <span class="w">         </span><span class="nt">&lt;maxSessions&gt;</span>0<span class="nt">&lt;/maxSessions&gt;</span>
 <span class="w">         </span><span class="nt">&lt;unrecognizedRequestsCount&gt;</span>0<span class="nt">&lt;/unrecognizedRequestsCount&gt;</span>
 <span class="w">      </span><span class="nt">&lt;/protocol&gt;</span>
-<span class="w">      </span><span class="nt">&lt;protocol</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;utserver&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;protocol</span><span class="w"> </span><span class="na">name=</span><span class="s">"utserver"</span><span class="nt">&gt;</span>
 <span class="w">         </span><span class="nt">&lt;status&gt;</span>
 <span class="w">            </span><span class="nt">&lt;reason&gt;</span>Reachable<span class="nt">&lt;/reason&gt;</span>
 <span class="w">            </span><span class="nt">&lt;status&gt;</span>RUNNING<span class="nt">&lt;/status&gt;</span>
@@ -17964,7 +17964,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "header.autohide", "navigation.header", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../js/timeago.min.js"></script>
       

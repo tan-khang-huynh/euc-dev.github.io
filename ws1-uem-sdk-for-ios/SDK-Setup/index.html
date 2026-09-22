@@ -25,13 +25,13 @@
       
       
       <link rel="icon" href="../../assets/logos/favicon-light.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
   <title>Omnissa Developer Portal</title>
 
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -18097,8 +18097,8 @@
 <span class="w">    </span><span class="n">AWController</span><span class="w"> </span><span class="o">*</span><span class="n">controller</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">AWController</span><span class="w"> </span><span class="n">clientInstance</span><span class="p">];</span>
 
 <span class="w">    </span><span class="c1">// 2) Defining the callback scheme so the app can get called back --</span>
-<span class="w">    </span><span class="c1">// this should match the URL scheme you defined in &quot;Callback Scheme Registration&quot;.</span>
-<span class="w">    </span><span class="n">controller</span><span class="p">.</span><span class="n">callbackScheme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">@</span><span class="s">&quot;awsdkcallback&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// this should match the URL scheme you defined in "Callback Scheme Registration".</span>
+<span class="w">    </span><span class="n">controller</span><span class="p">.</span><span class="n">callbackScheme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">@</span><span class="s">"awsdkcallback"</span><span class="p">;</span>
 
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">YES</span><span class="p">;</span>
 <span class="p">}</span>
@@ -18141,7 +18141,7 @@
 <ol>
 <li>Inside the app delegate, import the header of your <code>AWSDKDelegate</code> implementation, add an instance variable to hold a reference to it, and add the following code to <code>application:didFinishLaunchingWithOptions:</code> to set up the SDK controller:</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="cp">#import &quot;SampleAWSDKDelegate.h&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">#import "SampleAWSDKDelegate.h"</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="err">@</span><span class="n">implementation</span><span class="w"> </span><span class="n">AppDelegate</span>
 
@@ -18154,10 +18154,10 @@
 <span class="w">    </span><span class="n">AWController</span><span class="w"> </span><span class="o">*</span><span class="n">controller</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">AWController</span><span class="w"> </span><span class="n">clientInstance</span><span class="p">];</span>
 
 <span class="w">    </span><span class="c1">// 2) Defining the callback scheme so the app can get called back --</span>
-<span class="w">    </span><span class="c1">// this should match the URL scheme you defined in &quot;Callback Scheme Registration&quot;.</span>
-<span class="w">    </span><span class="n">controller</span><span class="p">.</span><span class="n">callbackScheme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">@</span><span class="s">&quot;UrlScheme&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// this should match the URL scheme you defined in "Callback Scheme Registration".</span>
+<span class="w">    </span><span class="n">controller</span><span class="p">.</span><span class="n">callbackScheme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">@</span><span class="s">"UrlScheme"</span><span class="p">;</span>
 
-<span class="w">    </span><span class="c1">// 3) Setting the controller&#39;s delegate to know when the initialization has been completed.</span>
+<span class="w">    </span><span class="c1">// 3) Setting the controller's delegate to know when the initialization has been completed.</span>
 <span class="w">    </span><span class="n">SampleAWSDKDelegate</span><span class="w"> </span><span class="o">*</span><span class="n">sdkDelegate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">SampleAWSDKDelegate</span><span class="w"> </span><span class="n">new</span><span class="p">];</span>
 <span class="w">    </span><span class="n">sdkDelegate</span><span class="p">.</span><span class="n">appDelegate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="p">;</span>
 <span class="w">    </span><span class="n">controller</span><span class="p">.</span><span class="n">delegate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sdkDelegate</span><span class="p">;</span>
@@ -18451,7 +18451,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "header.autohide", "navigation.header", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../js/timeago.min.js"></script>
       
