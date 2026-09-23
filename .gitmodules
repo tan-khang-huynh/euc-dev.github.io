@@ -36,7 +36,7 @@
 	branch = main
 [submodule "apis/ws1-uem-apis"]
 	path = apis/ws1-uem-apis
-	url = https://github.com/tan-khang-huynh/ws1-uem-apis.git
+	url = git@github.com:euc-dev/ws1-uem-apis.git
 	branch = main
 [submodule "apis/ws1-identity-services-api"]
 	path = apis/ws1-identity-services-api
