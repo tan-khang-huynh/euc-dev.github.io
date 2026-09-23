@@ -15,7 +15,7 @@ jobs:
     env:
       # Fork + branch for Workspace ONE UEM APIs submodule override (portal submodule still points at euc-dev in .gitmodules).
       WS1_UEM_APIS_REPO: https://github.com/tan-khang-huynh/ws1-uem-apis.git
-      WS1_UEM_APIS_BRANCH: feature/add-new-bruno-page
+      WS1_UEM_APIS_BRANCH: feature/2607-bruno-collection
     steps:
       - uses: actions/checkout@v4
         with:
